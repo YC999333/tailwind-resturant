@@ -4,7 +4,7 @@ function Events() {
   return (
     <div className='bg-gray-100 text-gray-800 p-8 bg-events-image'>
       <p className='text-4xl text-center text-gray-800 underline uppercase mt-15 mb-20'>
-        Sepcial Events
+        Special Events
       </p>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8'>
         <div className='rounded-lg shadow-sm bg-white border-4 border-white'>

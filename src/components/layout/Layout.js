@@ -4,11 +4,11 @@ import Footer from './Footer';
 
 function Layout(props) {
   return (
-    <div>
+    <div className='h-full'>
       <header className='sticky top-0 z-50'>
         <MainNaviation />
       </header>
-      <main>{props.children}</main>
+      <main className='h-full'>{props.children}</main>
       <footer>
         <Footer />
       </footer>

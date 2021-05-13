@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Events from './pages/Events';
 import Location from './pages/Location';
 import Testimonials from './pages/Testimonials';
+import Footer from './components/layout/Footer'
 
 function App() {
   return (

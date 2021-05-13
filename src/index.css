@@ -3,7 +3,13 @@
 @import 'tailwindcss/utilities';
 
 html,
-body {
-  height: 100%;
+body,
+#root {
+  min-height: 100%;
   width: 100%;
+}
+
+
+.text-shadow {
+  text-shadow: black 0.1em 0.1em 0.2em;
 }

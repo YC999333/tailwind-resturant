@@ -4,14 +4,14 @@ function Home() {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <div className='bg-cover h-full bg-landing-image'>
+    <div className='bg-cover h-screen bg-landing-image'>
       <div class='flex flex-col justify-center h-full text-xl md:text-2xl text-center'>
-        <p className='bg-opacity-80 bg-red-100 text-xl md:text-2xl text-blue-800 mx-auto rounded-lg p-1 md:p-4'>
-          Don't miss the best restaurant in town!
+        <p className='text-4xl md:text-6xl text-white font bold mx-auto p-1 md:p-4 text-shadow'>
+          饗受美食，彈指之間
         </p>
         <button
           onClick={() => setShowModal(true)}
-          className='transform hover:scale-110 bg-opacity-80 bg-red-100 text-blue-800 mx-auto rounded-lg p-2 md:p-3 mt-10'
+          className='font-bold text-reen-600 transform hover:scale-110 bg-white mx-auto rounded-lg py-2 px-10 md:py-3 mt-10'
         >
           Book now!
         </button>

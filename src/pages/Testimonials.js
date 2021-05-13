@@ -2,11 +2,11 @@ import React from 'react';
 
 function Testimonials() {
   return (
-    <div className='bg-gray-100 text-gray-800 p-8 bg-cover bg-testimonial-image'>
+    <div className='bg-gray-100 text-gray-800 py-8 bg-cover bg-testimonial-image'>
       <p className='text-center text-white mb-30 uppercase underline text-4xl mt-18'>
         Testimonials
       </p>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8 mt-20'>
+      <div className='grid p-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 mt-16'>
         <div className='max-w-md py-2 px-4 bg-white shadow-lg rounded-lg my-20 transform hover:scale-110'>
           <div className='flex justify-center md:justify-end -mt-16'>
             <img

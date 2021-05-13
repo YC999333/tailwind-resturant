@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Tailwind-Restaurant/static/css/main.13287088.chunk.css",
+    "main.js": "/Tailwind-Restaurant/static/js/main.0b0698a8.chunk.js",
+    "main.js.map": "/Tailwind-Restaurant/static/js/main.0b0698a8.chunk.js.map",
+    "runtime-main.js": "/Tailwind-Restaurant/static/js/runtime-main.a2fc2d68.js",
+    "runtime-main.js.map": "/Tailwind-Restaurant/static/js/runtime-main.a2fc2d68.js.map",
+    "static/js/2.8fe92f3c.chunk.js": "/Tailwind-Restaurant/static/js/2.8fe92f3c.chunk.js",
+    "static/js/2.8fe92f3c.chunk.js.map": "/Tailwind-Restaurant/static/js/2.8fe92f3c.chunk.js.map",
+    "index.html": "/Tailwind-Restaurant/index.html",
+    "static/css/main.13287088.chunk.css.map": "/Tailwind-Restaurant/static/css/main.13287088.chunk.css.map",
+    "static/js/2.8fe92f3c.chunk.js.LICENSE.txt": "/Tailwind-Restaurant/static/js/2.8fe92f3c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a2fc2d68.js",
+    "static/js/2.8fe92f3c.chunk.js",
+    "static/css/main.13287088.chunk.css",
+    "static/js/main.0b0698a8.chunk.js"
+  ]
+}

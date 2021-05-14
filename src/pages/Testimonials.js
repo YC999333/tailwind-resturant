@@ -6,8 +6,8 @@ function Testimonials() {
       <p className='text-center text-white mb-30 uppercase underline text-4xl mt-18'>
         Testimonials
       </p>
-      <div className='grid p-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 mt-16'>
-        <div className='max-w-md py-2 px-4 bg-white shadow-lg rounded-lg my-20 transform hover:scale-110'>
+      <div className='grid place-items-center p-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 mt-16'>
+        <div className='max-w-md w-10/12 py-4 px-8 bg-white shadow-lg rounded-lg my-20 transform hover:scale-110'>
           <div className='flex justify-center md:justify-end -mt-16'>
             <img
               className='w-20 h-20 object-cover rounded-full border-2 border-indigo-500'
@@ -22,15 +22,15 @@ function Testimonials() {
           </div>
           <div className='flex justify-end mt-4'>
             <a href='#' className='text-xl font-medium text-indigo-500'>
-              踹兔
+              小兔兔
             </a>
           </div>
         </div>
-        <div className='max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20 transform hover:scale-110'>
+        <div className='w-10/12 max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20 transform hover:scale-110'>
           <div className='flex justify-center md:justify-end -mt-16'>
             <img
               className='w-20 h-20 object-cover rounded-full border-2 border-indigo-500'
-              src='https://upload.cc/i1/2021/05/12/A9gtTL.jpg'
+              src='https://upload.cc/i1/2021/05/14/K98ocl.png'
             />
           </div>
           <div>
@@ -47,11 +47,11 @@ function Testimonials() {
             </a>
           </div>
         </div>
-        <div className='max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20 transform hover:scale-110'>
+        <div className='w-10/12 max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20 transform hover:scale-110'>
           <div className='flex justify-center md:justify-end -mt-16'>
             <img
               className='w-20 h-20 object-cover rounded-full border-2 border-indigo-500'
-              src='https://upload.cc/i1/2021/05/12/XlGIJs.jpg'
+              src='https://upload.cc/i1/2021/05/14/CfnypJ.png'
             />
           </div>
           <div>

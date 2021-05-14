@@ -4,7 +4,9 @@ import Home from './pages/Home';
 import Events from './pages/Events';
 import Location from './pages/Location';
 import Testimonials from './pages/Testimonials';
-import Footer from './components/layout/Footer'
+import About from './pages/About';
+import MainMenu from './pages/MainMenu';
+import DrinkMenu from './pages/DrinkMenu';
 
 function App() {
   return (
@@ -15,6 +17,15 @@ function App() {
           <Events />
           <Testimonials />
           <Location />
+        </Route>
+        <Route path='/about'>
+          <About />
+        </Route>
+        <Route path='/main-menu'>
+          <MainMenu />
+        </Route>
+        <Route path='/drink-menu'>
+          <DrinkMenu />
         </Route>
       </Switch>
     </Layout>

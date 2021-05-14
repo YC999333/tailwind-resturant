@@ -71,7 +71,39 @@ function About() {
               榮譽顧問
             </h2>
             <p className='text-gray-600 text-center p-4'>
-              擅長"創意料理"，並擁有多樣獨門配方跟養蟲經驗，
+              擅長"創意料理"，並擁有多樣獨門配方跟養蟲經驗
+            </p>
+          </div>
+        </div>
+        <div className='w-10/12 h-4/6 max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20 transform hover:scale-110'>
+          <div className='flex justify-center -mt-16'>
+            <img
+              className='w-28 h-28 object-cover rounded-full border-2 border-indigo-500'
+              src='https://upload.cc/i1/2021/05/14/xtQpFO.jpg'
+            />
+          </div>
+          <div>
+            <h2 className='text-gray-800 text-lg text-center font-semibold p-4'>
+              咖啡調酒師
+            </h2>
+            <p className='text-gray-600 text-center p-4'>
+              咖啡跟調酒高手，擁有一身筋肉，因此有筋肉咖啡師的稱號
+            </p>
+          </div>
+        </div>
+        <div className='w-10/12 h-4/6 max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20 transform hover:scale-110'>
+          <div className='flex justify-center -mt-16'>
+            <img
+              className='w-28 h-28 object-cover rounded-full border-2 border-indigo-500'
+              src='https://upload.cc/i1/2021/05/14/YCABqV.jpg'
+            />
+          </div>
+          <div>
+            <h2 className='text-gray-800 text-lg text-center font-semibold p-4'>
+              最美麗的服務生
+            </h2>
+            <p className='text-gray-600 text-center p-4'>
+              本店受歡迎的原因之一，超級正妹
             </p>
           </div>
         </div>

@@ -12,7 +12,7 @@ function About() {
         <p className='p-3'>從前菜到甜點，都深受大家喜愛</p>
         <p className='underline text-3xl mt-10'>Management Team</p>
       </div>
-      <div className='grid place-items-center p-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6 mt-48'>
+      <div className='grid place-items-center p-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-6 mt-48'>
         <div className='w-10/12 h-4/6 max-w-md p-4 bg-white shadow-lg rounded-lg my-10 transform hover:scale-110'>
           <div className='flex justify-center -mt-16'>
             <img

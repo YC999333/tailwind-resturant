@@ -226,29 +226,22 @@ function MainNavigation() {
                 >
                   About Us
                 </a>
+                
                 <div class='relative group'>
-                  <button class='flex flex-row items-center w-full px-4 py-4 mt-2 text-base font-bold text-left uppercase bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 focus:outline-none font-montserrat'>
-                    <span>Menu</span>
-                  </button>
-                  <div class='absolute z-10 hidden bg-grey-200 group-hover:block'>
-                    <div class='px-2 pt-2 pb-4 bg-white bg-gray-200 shadow-lg'>
-                      <div class='grid grid-cols-1 gap-4 md:grid-cols-2'>
-                        <a
-                          class='block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline'
-                          href='#'
-                        >
-                          Link #1
+                    <button class='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium'>
+                      <span>Menu</span>
+                    </button>
+                    <div class='w-28 h-auto absolute top-15 z-20 p-4 hidden bg-gray-300 rounded-lg group-hover:block'>
+                      <div class='grid gap-2 p-1 grid-cols-1 grid-rows-2'>
+                        <a class='p-1 text-sm font-semibold' href='/main-menu'>
+                          Main
                         </a>
-                        <a
-                          class='block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline'
-                          href='#'
-                        >
-                          Link #2
+                        <a class='p-1 text-sm font-semibold' href='/drink-menu'>
+                          Drink
                         </a>
                       </div>
                     </div>
                   </div>
-                </div>
 
                 <a
                   href='#'
@@ -256,12 +249,21 @@ function MainNavigation() {
                 >
                   Book
                 </a>
-                <a
-                  href='#'
-                  className='text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'
-                >
-                  Delivery & TakeOut
-                </a>
+                <div class='relative group'>
+                    <button class='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium'>
+                      <span>Delivery & Pick Up</span>
+                    </button>
+                    <div class='w-28 h-auto absolute top-15 z-20 p-4 hidden bg-gray-300 rounded-lg group-hover:block'>
+                      <div class='grid gap-2 p-1 grid-cols-1 grid-rows-2'>
+                        <a class='p-1 text-sm font-semibold' href='/main-menu'>
+                          Delivery
+                        </a>
+                        <a class='p-1 text-sm font-semibold' href='/drink-menu'>
+                          Pick Up
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 <a
                   href='#'
                   className='text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'

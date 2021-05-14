@@ -14,9 +14,9 @@ function About() {
       </div>
       <div className='grid place-items-center p-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6 mt-48'>
         <div className='w-10/12 h-4/6 max-w-md p-4 bg-white shadow-lg rounded-lg my-10 transform hover:scale-110'>
-          <div className='flex justify-center md:justify-end -mt-16'>
+          <div className='flex justify-center -mt-16'>
             <img
-              className='w-25 h-25 object-cover rounded-full border-2 border-indigo-500'
+              className='w-28 h-28  object-cover rounded-full border-2 border-indigo-500'
               src='http://daiduongrestaurant.com/wp-content/uploads/2019/12/BRT00145a.jpg'
             />
           </div>
@@ -28,9 +28,9 @@ function About() {
           </div>
         </div>
         <div className='w-10/12 h-4/6 max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20 transform hover:scale-110'>
-          <div className='flex justify-center md:justify-end -mt-16'>
+          <div className='flex justify-center -mt-16'>
             <img
-              className='w-25 h-25 object-cover rounded-full border-2 border-indigo-500'
+              className='w-28 h-28 object-cover rounded-full border-2 border-indigo-500'
               src='https://upload.cc/i1/2021/05/10/wGmFIN.jpg'
             />
           </div>
@@ -44,9 +44,9 @@ function About() {
           </div>
         </div>
         <div className='w-10/12 h-4/6 max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20 transform hover:scale-110'>
-          <div className='flex justify-center md:justify-end -mt-16'>
+          <div className='flex justify-center -mt-16'>
             <img
-              className='w-25 h-25 object-cover rounded-full border-2 border-indigo-500'
+              className='w-28 h-28 place-items-center object-cover rounded-full border-2 border-indigo-500'
               src='https://upload.cc/i1/2021/05/14/K98ocl.png'
             />
           </div>
@@ -60,9 +60,9 @@ function About() {
           </div>
         </div>
         <div className='w-10/12 h-4/6 max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20 transform hover:scale-110'>
-          <div className='flex justify-center md:justify-end -mt-16'>
+          <div className='flex justify-center -mt-16'>
             <img
-              className='w-25 h-25 object-cover rounded-full border-2 border-indigo-500'
+              className='w-28 h-28 object-cover rounded-full border-2 border-indigo-500'
               src='https://upload.cc/i1/2021/05/14/CfnypJ.png'
             />
           </div>

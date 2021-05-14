@@ -100,10 +100,26 @@ function About() {
           </div>
           <div>
             <h2 className='text-gray-800 text-lg text-center font-semibold p-4'>
-              最美麗的服務生
+              正妹服務生
             </h2>
             <p className='text-gray-600 text-center p-4'>
-              本店受歡迎的原因之一，超級正妹
+              本店受歡迎的原因之一，男客人的最愛
+            </p>
+          </div>
+        </div>
+        <div className='w-10/12 h-4/6 max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20 transform hover:scale-110'>
+          <div className='flex justify-center -mt-16'>
+            <img
+              className='w-28 h-28 object-cover rounded-full border-2 border-indigo-500'
+              src='https://upload.cc/i1/2021/05/14/g3NKR5.jpg'
+            />
+          </div>
+          <div>
+            <h2 className='text-gray-800 text-lg text-center font-semibold p-4'>
+              小鮮肉服務生
+            </h2>
+            <p className='text-gray-600 text-center p-4'>
+              本店受歡迎的原因之一，女客人的最愛
             </p>
           </div>
         </div>

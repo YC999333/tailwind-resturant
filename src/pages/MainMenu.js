@@ -2,7 +2,7 @@ import React from 'react';
 
 function Menu() {
   return (
-    <div className='bg-gray-100 text-white px-48 py-8 bg-cover text-shadow bg-main-image'>
+    <div className='bg-gray-100 text-white px-28 sm:px-48 py-8 bg-cover text-shadow bg-main-image'>
       <p className='text-center mb-30 uppercase underline text-5xl mt-20'>
         Menu
       </p>

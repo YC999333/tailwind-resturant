@@ -3,7 +3,7 @@ import React from 'react';
 function About() {
   return (
     <div className='h-full bg-about-image backdrop-filter backdrop-blur-md'>
-      <div className='text-center text-gray-800  mx-auto h-48 text-2xl p-4'>
+      <div className='text-center text-gray-800  mx-auto h-48 text-2xl p-4 '>
         <p className='underline text-3xl p-3 mt-5 mb-10'>History</p>
         <p className='p-3'>
           LaVuTa 創立於 2021 年 4 月，創辦人為 Pepsi
@@ -12,7 +12,7 @@ function About() {
         <p className='p-3'>從前菜到甜點，都深受大家喜愛</p>
         <p className='underline text-3xl mt-10'>Management Team</p>
       </div>
-      <div className='grid place-items-center p-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-6 mt-48'>
+      <div className='grid place-items-center p-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-6 mt-64 sm:mt-48'>
         <div className='w-10/12 h-4/6 max-w-md p-4 bg-white shadow-lg rounded-lg my-10 transform hover:scale-110'>
           <div className='flex justify-center -mt-16'>
             <img

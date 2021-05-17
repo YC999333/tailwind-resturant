@@ -62,21 +62,12 @@ function MainNavigation() {
                   >
                     Book
                   </a>
-                  <div class='relative group'>
-                    <button class='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium'>
-                      <span>Delivery & Pick Up</span>
-                    </button>
-                    <div class='w-28 h-auto absolute top-15 z-20 p-4 hidden bg-gray-300 rounded-lg group-hover:block'>
-                      <div class='grid gap-2 p-1 grid-cols-1 grid-rows-2'>
-                        <a class='p-1 text-sm font-semibold' href='/main-menu'>
-                          Delivery
-                        </a>
-                        <a class='p-1 text-sm font-semibold' href='/drink-menu'>
-                          Pick Up
-                        </a>
-                      </div>
-                    </div>
-                  </div>
+                  <a
+                    href='/online-order'
+                    className='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium'
+                  >
+                    Online Order
+                  </a>
                 </div>
               </div>
             </div>
@@ -85,14 +76,14 @@ function MainNavigation() {
               <div className='hidden lg:block'>
                 <div className='ml-10 flex items-center space-x-4'>
                   <a
-                    href='#'
+                    href='/sign-up'
                     className=' hover:bg-gray-700 text-white px-3 py-2 rounded-md text-base font-medium'
                   >
                     Sign Up
                   </a>
 
                   <a
-                    href='#'
+                    href='/sign-in'
                     className='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium'
                   >
                     Sign In
@@ -163,7 +154,7 @@ function MainNavigation() {
                 aria-expanded='false'
               >
                 <span className='sr-only'>Open main menu</span>
-                {!isOpen ? (
+                {!isMenuOpen ? (
                   <svg
                     className='block h-6 w-6'
                     xmlns='http://www.w3.org/2000/svg'
@@ -249,29 +240,20 @@ function MainNavigation() {
                 >
                   Book
                 </a>
-                <div class='relative group'>
-                    <button class='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium'>
-                      <span>Delivery & Pick Up</span>
-                    </button>
-                    <div class='w-28 h-auto absolute top-15 z-20 p-4 hidden bg-gray-300 rounded-lg group-hover:block'>
-                      <div class='grid gap-2 p-1 grid-cols-1 grid-rows-2'>
-                        <a class='p-1 text-sm font-semibold' href='/main-menu'>
-                          Delivery
-                        </a>
-                        <a class='p-1 text-sm font-semibold' href='/drink-menu'>
-                          Pick Up
-                        </a>
-                      </div>
-                    </div>
-                  </div>
                 <a
-                  href='#'
+                  href='/online-order'
+                  className='text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'
+                >
+                  Online Order
+                </a>
+                <a
+                  href='/sign-up'
                   className='text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'
                 >
                   Sign Up
                 </a>
                 <a
-                  href='#'
+                  href='/sign-in'
                   className='text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'
                 >
                   Sign In

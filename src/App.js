@@ -7,6 +7,9 @@ import Testimonials from './pages/Testimonials';
 import About from './pages/About';
 import MainMenu from './pages/MainMenu';
 import DrinkMenu from './pages/DrinkMenu';
+import SignUp from './pages/SignUp'
+import SignIn from './pages/SignIn'
+import OnlineOrder from './pages/OnlineOrder'
 
 function App() {
   return (
@@ -26,6 +29,15 @@ function App() {
         </Route>
         <Route path='/drink-menu'>
           <DrinkMenu />
+        </Route>
+        <Route path='/sign-up'>
+          <SignUp />
+        </Route>
+        <Route path='/sign-in'>
+          <SignIn />
+        </Route>
+        <Route path='/online-order'>
+          <OnlineOrder />
         </Route>
       </Switch>
     </Layout>

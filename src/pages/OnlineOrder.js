@@ -502,7 +502,7 @@ function OnlineOrder() {
                     <Cart />
                 </div>
 
-                <div class='border-red-500 mx-auto border-2 rounded-lg shadow-lg fixed z-50 bg-gray-50'>
+                <div class='h-screen border-red-500 mx-auto border-2 rounded-lg shadow-lg fixed z-50 bg-gray-50'>
                     <button
                         onClick={() => setIsCartOpen(!isCartOpen)}
                         className='text-3xl w-12 h-12'

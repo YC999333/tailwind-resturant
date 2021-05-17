@@ -5,7 +5,7 @@ function OnlineOrder() {
     const [isCartOpen, setIsCartOpen] = useState(false)
 
     return (
-        <div className='bg-gray-50 text-gray-800 p-4'>
+        <div className='bg-gray-50 text-gray-800 p-1'>
             <div className='grid p-2 grid-cols-1 sm:grid-cols-6 gap-4 p-4'>
                 <div className='grid sm:col-span-4'>
                     <p className='text-center mb-24 uppercase text-4xl font-bold mt-10'>Online Order</p>
@@ -498,7 +498,7 @@ function OnlineOrder() {
                     </div>
                 </div>
                 
-                <div className='grid hidden md:block sm:col-span-2 mt-4 p-1 h-screen'>               
+                <div className='grid hidden md:block sm:col-span-2 mt-4 h-screen'>               
                     <Cart />
                 </div>
 

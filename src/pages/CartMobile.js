@@ -3,16 +3,16 @@ import React from 'react'
 function Cart() {
     return (
         <div className='bg-white p-2 shadow-lg rounded-lg'>          
-            <table className="mt-10 table-auto text-sm sm:text-md lg:text-base" cellspacing="0">
+            <table className="mt-10 table-auto text-sm lg:text-base" cellspacing="0">
                 <thead>
                     <tr className="h-12 uppercase">
                         <th className="hidden md:table-cell"></th>
-                        <th className="text-sm sm:text-md lg:text-base text-left">Item</th>
-                        <th className="text-sm sm:text-md lg:text-base text-center pl-5 lg:pl-0">
-                        <span className="text-sm sm:text-md lg:text-base text-center">Qty</span>
+                        <th className="text-left">Item</th>
+                        <th className="text-center pl-5 lg:pl-0">
+                        <span className="text-center">Qty</span>
                         </th>
-                        <th className="text-sm sm:text-md lg:text-base text-center">Unit price</th>
-                        <th className="text-sm sm:text-md lg:text-base text-center">Total price</th>
+                        <th className="md:hidden sm:hidden text-center md:table-cell">Unit price</th>
+                        <th className="text-center">Total price</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -38,7 +38,7 @@ function Cart() {
                             </div>
                         </div>
                         </td>
-                        <td className=" text-center md:table-cell">
+                        <td className="md:hidden sm:hidden text-center md:table-cell">
                         <span className="text-sm lg:text-base font-medium">
                             $230
                         </span>
@@ -69,7 +69,7 @@ function Cart() {
                                 </div>
                             </div>
                         </td>
-                        <td className=" text-center md:table-cell">
+                        <td className="md:hidden sm:hidden text-center md:table-cell">
                         <span className="text-sm lg:text-base font-medium">
                             $480
                         </span>
@@ -102,7 +102,7 @@ function Cart() {
                                 </div>
                             </div>
                             </td>
-                        <td className=" text-center md:table-cell">
+                        <td className="md:hidden sm:hidden text-center md:table-cell">
                         <span className="text-sm lg:text-base font-medium">
                             $230
                         </span>
@@ -134,7 +134,7 @@ function Cart() {
                                 </div>
                         </div>
                         </td>
-                        <td className=" text-center md:table-cell">
+                        <td className="md:hidden sm:hidden text-center md:table-cell">
                         <span className="text-sm lg:text-base font-medium">
                             $230
                         </span>
@@ -166,7 +166,7 @@ function Cart() {
                                 </div>
                         </div>
                         </td>
-                        <td className=" text-center md:table-cell">
+                        <td className="md:hidden sm:hidden text-center md:table-cell">
                         <span className="text-sm lg:text-base font-medium">
                             $230
                         </span>
@@ -198,7 +198,7 @@ function Cart() {
                                 </div>
                         </div>
                         </td>
-                        <td className=" text-center md:table-cell">
+                        <td className="md:hidden sm:hidden text-center md:table-cell">
                         <span className="text-sm lg:text-base font-medium">
                             $230
                         </span>

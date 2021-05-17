@@ -2,18 +2,17 @@ import React from 'react'
 
 function Cart() {
     return (
-        <div className='mr-5 sm:visible'>          
-            <table className="w-full table-auto text-sm lg:text-base" cellspacing="0">
+        <div className='bg-white p-2 shadow-lg rounded-lg'>          
+            <table className="mt-10 w-full table-auto text-sm lg:text-base" cellspacing="0">
                 <thead>
                     <tr className="h-12 uppercase">
                         <th className="hidden md:table-cell"></th>
                         <th className="text-left">Item</th>
-                        <th className="lg:text-right text-left pl-5 lg:pl-0">
-                        <span className="lg:hidden" title="Quantity">Qty</span>
-                        <span className="hidden lg:inline">Quantity</span>
+                        <th className="text-center pl-5 lg:pl-0">
+                        <span className="text-center">Qty</span>
                         </th>
-                        <th className="hidden text-right md:table-cell">Unit price</th>
-                        <th className="text-right">Total price</th>
+                        <th className="md:hidden sm:hidden text-center md:table-cell">Unit price</th>
+                        <th className="text-center">Total price</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -39,12 +38,12 @@ function Cart() {
                             </div>
                         </div>
                         </td>
-                        <td className="hidden text-right md:table-cell">
+                        <td className="md:hidden sm:hidden text-center md:table-cell">
                         <span className="text-sm lg:text-base font-medium">
                             $230
                         </span>
                         </td>
-                        <td className="text-right">
+                        <td className="text-center">
                         <span className="text-sm lg:text-base font-medium">
                             $230
                         </span>
@@ -70,12 +69,12 @@ function Cart() {
                                 </div>
                             </div>
                         </td>
-                        <td className="hidden text-right md:table-cell">
+                        <td className="md:hidden sm:hidden text-center md:table-cell">
                         <span className="text-sm lg:text-base font-medium">
                             $480
                         </span>
                         </td>
-                        <td className="text-right">
+                        <td className="text-center">
                         <span className="text-sm lg:text-base font-medium">
                             $480
                         </span>
@@ -103,12 +102,12 @@ function Cart() {
                                 </div>
                             </div>
                             </td>
-                        <td className="hidden text-right md:table-cell">
+                        <td className="md:hidden sm:hidden text-center md:table-cell">
                         <span className="text-sm lg:text-base font-medium">
                             $230
                         </span>
                         </td>
-                        <td className="text-right">
+                        <td className="text-center">
                         <span className="text-sm lg:text-base font-medium">
                             $230
                         </span>
@@ -135,44 +134,12 @@ function Cart() {
                                 </div>
                         </div>
                         </td>
-                        <td className="hidden text-right md:table-cell">
+                        <td className="md:hidden sm:hidden text-center md:table-cell">
                         <span className="text-sm lg:text-base font-medium">
                             $230
                         </span>
                         </td>
-                        <td className="text-right">
-                        <span className="text-sm lg:text-base font-medium">
-                            $230
-                        </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td className="hidden pb-4 md:table-cell">
-                        </td>
-                        <td>
-                        <a href="#">
-                            <p className="text-left">Pizza Margherita</p>
-                            <form action="" method="POST">
-                            <button type="submit" className="text-gray-700 text-left">
-                                <small>(Remove)</small>
-                            </button>
-                            </form>
-                        </a>
-                        </td>
-                        <td className="justify-center md:justify-end md:flex mt-6">
-                        <div className="w-20 h-10">
-                            <div className="relative flex flex-row w-full h-8">
-                                <input type="number" value="1" 
-                            className="w-full font-semibold text-center text-gray-700 bg-gray-200 outline-none focus:outline-none hover:text-black focus:text-black" />
-                                </div>
-                        </div>
-                        </td>
-                        <td className="hidden text-right md:table-cell">
-                        <span className="text-sm lg:text-base font-medium">
-                            $230
-                        </span>
-                        </td>
-                        <td className="text-right">
+                        <td className="text-center">
                         <span className="text-sm lg:text-base font-medium">
                             $230
                         </span>
@@ -199,12 +166,44 @@ function Cart() {
                                 </div>
                         </div>
                         </td>
-                        <td className="hidden text-right md:table-cell">
+                        <td className="md:hidden sm:hidden text-center md:table-cell">
                         <span className="text-sm lg:text-base font-medium">
                             $230
                         </span>
                         </td>
-                        <td className="text-right">
+                        <td className="text-center">
+                        <span className="text-sm lg:text-base font-medium">
+                            $230
+                        </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td className="hidden pb-4 md:table-cell">
+                        </td>
+                        <td>
+                        <a href="#">
+                            <p className="text-left">Pizza Margherita</p>
+                            <form action="" method="POST">
+                            <button type="submit" className="text-gray-700 text-left">
+                                <small>(Remove)</small>
+                            </button>
+                            </form>
+                        </a>
+                        </td>
+                        <td className="justify-center md:justify-end md:flex mt-6">
+                        <div className="w-20 h-10">
+                            <div className="relative flex flex-row w-full h-8">
+                                <input type="number" value="1" 
+                            className="w-full font-semibold text-center text-gray-700 bg-gray-200 outline-none focus:outline-none hover:text-black focus:text-black" />
+                                </div>
+                        </div>
+                        </td>
+                        <td className="md:hidden sm:hidden text-center md:table-cell">
+                        <span className="text-sm lg:text-base font-medium">
+                            $230
+                        </span>
+                        </td>
+                        <td className="text-center">
                         <span className="text-sm lg:text-base font-medium">
                             $230
                         </span>

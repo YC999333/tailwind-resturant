@@ -8,10 +8,11 @@ function OnlineOrder() {
         <div className='bg-gray-50 text-gray-800 p-4'>
             <div className='grid p-2 grid-cols-1 sm:grid-cols-6 gap-4 p-4'>
                 <div className='grid sm:col-span-4'>
-                    <p className='text-center mb-30 uppercase underline text-5xl mt-10'>
+                    <p className='text-center mb-24 uppercase text-4xl font-bold mt-10'>Online Order</p>
+                    <p className='text-center mb-16 uppercase underline text-3xl font-bold'>
                         Main Menu
                     </p>
-                    <p className='text-center mb-30 uppercase underline text-2xl mt-20'>
+                    <p className='text-center mb-12 uppercase underline text-2xl'>
                         ANTIPASTI (前菜)
                     </p>
                     <div className='gap-6 grid place-items-center p-2 grid-cols-1 lg:grid-cols-2 gap-2 xl:gap-6 mt-8'>
@@ -292,10 +293,11 @@ function OnlineOrder() {
                             </div>
                         </div>
                     </div>
-                    <p className='text-center mb-30 uppercase underline text-5xl mt-20'>
+                    <div className='border-b-2 border-gray-800 border-solid mt-20'></div>
+                    <p className='text-center mb-12 uppercase underline text-3xl font-bold mt-24'>
                         Drink Menu
                     </p>
-                    <p className='text-center mb-30 uppercase underline text-2xl mt-20'>
+                    <p className='text-center mb-12 uppercase underline text-2xl mt-20'>
                         Red Wine (By Bottle)
                     </p>
                     <div className='gap-6 grid place-items-center p-2 grid-cols-1 lg:grid-cols-2 gap-2 xl:gap-6 mt-8'>

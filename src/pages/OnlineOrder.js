@@ -6,7 +6,7 @@ function OnlineOrder() {
 
     return (
         <div className='bg-gray-50 text-gray-800 p-1'>
-            <div className='grid p-2 grid-cols-1 sm:grid-cols-8 lg:grid-cols-6 gap-4 p-4'>
+            <div className='grid p-4 grid-cols-1 sm:grid-cols-8 lg:grid-cols-6 gap-4'>
                 <div className='grid sm:col-span-8 md:col-span-5 lg:col-span-4'>
                     <p className='text-center mb-24 uppercase text-4xl font-bold mt-10'>Online Order</p>
                     <p className='text-center mb-16 uppercase underline text-3xl font-bold'>
@@ -502,15 +502,17 @@ function OnlineOrder() {
                     <Cart />
                 </div>
 
-                <div class='md:hidden border-red-500 mx-auto border-2 rounded-lg shadow-lg fixed z-50 bg-gray-50'>
-                    <button
-                        onClick={() => setIsCartOpen(!isCartOpen)}
-                        className='text-3xl w-12 h-12'
-                    >
-                    <i className="far fa-shopping-cart"></i>
-                    </button>
-                    
-                    {isCartOpen ? (<Cart />) : null }
+                <div className='fixed top-0 left-0 w-full h-full pt-24 pb-2'>
+                    <div className='md:hidden border-red-500 mx-auto border-2 rounded-lg shadow-lg relative left-2 z-50 bg-gray-50 inline-block max-h-full overflow-x-auto'>
+                        <button
+                            onClick={() => setIsCartOpen(!isCartOpen)}
+                            className='text-2xl w-10 h-10'
+                        >
+                        <i className="far fa-shopping-cart"></i>
+                        </button>
+                        
+                        {isCartOpen ? (<Cart />) : null }
+                    </div>
                 </div>
             </div>
         </div>

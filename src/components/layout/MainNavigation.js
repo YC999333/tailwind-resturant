@@ -40,16 +40,16 @@ function MainNavigation() {
                     About Us
                   </a>
 
-                  <div class='relative group'>
-                    <button class='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium'>
+                  <div className='relative group'>
+                    <button className='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium'>
                       <span>Menu</span>
                     </button>
                     <div class='w-28 h-auto absolute top-15 z-20 p-4 hidden bg-gray-300 rounded-lg group-hover:block'>
-                      <div class='grid gap-2 p-1 grid-cols-1 grid-rows-2'>
-                        <a class='p-1 text-sm font-semibold' href='/main-menu'>
+                      <div className='grid gap-2 p-1 grid-cols-1 grid-rows-2'>
+                        <a className='p-1 text-sm font-semibold' href='/main-menu'>
                           Main
                         </a>
-                        <a class='p-1 text-sm font-semibold' href='/drink-menu'>
+                        <a className='p-1 text-sm font-semibold' href='/drink-menu'>
                           Drink
                         </a>
                       </div>
@@ -57,7 +57,7 @@ function MainNavigation() {
                   </div>
 
                   <a
-                    href='#'
+                    href='/book-table'
                     className='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium'
                   >
                     Book
@@ -235,7 +235,7 @@ function MainNavigation() {
                   </div>
 
                 <a
-                  href='#'
+                  href='/book-tabel'
                   className='text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'
                 >
                   Book

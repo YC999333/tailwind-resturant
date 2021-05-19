@@ -5,7 +5,7 @@ function Home() {
 
   return (
     <div className='bg-cover h-screen bg-landing-image'>
-      <div class='flex flex-col justify-center h-full text-xl md:text-2xl text-center'>
+      <div className='flex flex-col justify-center h-full text-xl md:text-2xl text-center'>
         <p className='text-4xl md:text-6xl text-white font bold mx-auto p-1 md:p-4 text-shadow'>
           饗受美食，彈指之間
         </p>
@@ -16,7 +16,6 @@ function Home() {
           Book now!
         </button>
         {showModal ? (
-          <>
             <div className='relative px-4 h-36 md:flex md:items-center md:justify-center'>
               <div className='bg-black opacity-25 absolute z-10 inset-0'></div>
               <div className='bg-white rounded-lg md:max-w-md md:mx-auto p-4 fixed inset-x-0 bottom-0 z-50 mb-4 mx-4 md:relative'>
@@ -40,7 +39,6 @@ function Home() {
                 </div>
               </div>
             </div>
-          </>
         ) : null}
       </div>
     </div>

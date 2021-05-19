@@ -13,3 +13,7 @@ body,
 .text-shadow {
   text-shadow: black 0.1em 0.1em 0.2em;
 }
+
+.dropdown:hover > .dropdown-detail{
+  display: block;
+}

@@ -10,6 +10,7 @@ import DrinkMenu from './pages/DrinkMenu';
 import SignUp from './pages/SignUp'
 import SignIn from './pages/SignIn'
 import OnlineOrder from './pages/OnlineOrder'
+import Book from './pages/Book'
 
 function App() {
   return (
@@ -38,6 +39,9 @@ function App() {
         </Route>
         <Route path='/online-order'>
           <OnlineOrder />
+        </Route>
+        <Route path='/book-table'>
+          <Book />
         </Route>
       </Switch>
     </Layout>

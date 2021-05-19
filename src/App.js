@@ -10,7 +10,7 @@ import DrinkMenu from './pages/DrinkMenu';
 import SignUp from './pages/SignUp'
 import SignIn from './pages/SignIn'
 import OnlineOrder from './pages/OnlineOrder'
-import BookF from './pages/Book'
+import Book from './pages/Book'
 
 function App() {
   return (
@@ -41,7 +41,7 @@ function App() {
           <OnlineOrder />
         </Route>
         <Route path='/book-table'>
-          <BookF />
+          <Book />
         </Route>
       </Switch>
     </Layout>

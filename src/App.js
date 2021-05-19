@@ -10,7 +10,7 @@ import DrinkMenu from './pages/DrinkMenu';
 import SignUp from './pages/SignUp'
 import SignIn from './pages/SignIn'
 import OnlineOrder from './pages/OnlineOrder'
-import Book from './pages/Book'
+import BookF from './pages/Book'
 
 function App() {
   return (
@@ -37,11 +37,11 @@ function App() {
         <Route path='/sign-in'>
           <SignIn />
         </Route>
-        <Route path='/online-order'>
+        <Route path='/order-online'>
           <OnlineOrder />
         </Route>
         <Route path='/book-table'>
-          <Book />
+          <BookF />
         </Route>
       </Switch>
     </Layout>

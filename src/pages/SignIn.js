@@ -3,7 +3,7 @@ import React from 'react'
 function SignIn() {
     return (
         <div className="bg-gray-100 h-screen flex flex-col">
-            <div className="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
+            <div className="container max-w-sm mx-auto mt-10 md:mt-20 flex flex-col items-center justify-center px-2">
                 <div className="bg-white px-6 py-4 rounded shadow-lg text-black w-full">
                     <h1 className="mb-8 text-3xl text-center">Sign in</h1>
 

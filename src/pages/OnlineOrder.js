@@ -16,21 +16,21 @@ function OnlineOrder() {
                         ANTIPASTI (前菜)
                     </p>
                     <div className='gap-6 grid place-items-center p-2 grid-cols-1 lg:grid-cols-2 gap-2 xl:gap-6 mt-8'>
-                        <div className='relative text-left text-xl lg:text-2xl h-full w-4/5 p-2 rounded-lg bg-white border-solid border-2 border-light-gray-500 transform hover:scale-110 hover:shadow-lg hover:border-red-500'>
+                        <div className='relative text-left text-xl lg:text-2xl h-full w-4/5 p-2 rounded-lg bg-white border-solid border-2 border-light-gray-500 hover:scale-110 hover:shadow-lg hover:border-red-500'>
                             <p className='p-2'>Antipasti</p>
-                            <p className='p-2 text-xs sm:text-xs sm:text-sm'>
+                            <p className='p-2 text-xs sm:text-xs md:text-sm'>
                                 handcrafted italian salami, cheese, olives and vegetables
                             </p>
                             <p className='p-2'>$200</p>
                             <a href="#" className="mx-3 font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</a>
                             <div className="absolute bottom-2.5 right-5 sm:right-5 sm:right-10">
-                                <input className="border text-center w-10 text-xs trasmform hover:border-red-500" min='0' type="number"/>
+                                <input className="border text-center w-10 text-xs trasmform hover:border-red-500" min='0' value='1' type="number"/>
                                 <button className="border text-center w-10 text-xs rounded-lg mx-2 trasmform hover:border-red-500" type="submit">Add</button>
                             </div>
                         </div>
                         <div className='relative text-left text-xl lg:text-2xl h-full w-4/5 p-2 rounded-lg  bg-white border-solid border-2 border-light-gray-500 transform hover:scale-110 hover:shadow-lg hover:border-red-500'>
                             <p className='p-2'>Meatballs</p>
-                            <p className='p-2 text-xs sm:text-sm'>three housemade meatballs with grilled bread</p>
+                            <p className='p-2 text-xs md:text-sm'>three housemade meatballs with grilled bread</p>
                             <p className='p-2'>$220</p>
                             <a href="#" className="mx-3 font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</a>
                             <div className="absolute bottom-2.5 right-5 sm:right-5 sm:right-10">
@@ -40,7 +40,7 @@ function OnlineOrder() {
                         </div>
                         <div className='relative text-left text-xl lg:text-2xl h-full w-4/5 p-2 rounded-lg  bg-white border-solid border-2 border-light-gray-500 transform hover:scale-110 hover:shadow-lg hover:border-red-500'>
                                 <p className='p-2'>Bruschetta</p>
-                                <p className='p-2 text-xs sm:text-sm'>
+                                <p className='p-2 text-xs md:text-sm'>
                                     grilled ciabatta bread topped with fresh tomatoes, garlic, basil and
                                     olive oil
                                 </p>
@@ -53,7 +53,7 @@ function OnlineOrder() {
                         </div>
                         <div className='relative text-left text-xl lg:text-2xl h-full w-4/5 p-2 rounded-lg  bg-white border-solid border-2 border-light-gray-500 transform hover:scale-110 hover:shadow-lg hover:border-red-500'>
                             <p className='p-2'>Mussels</p>
-                            <p className='p-2 text-xs sm:text-sm'>in a spicy tomato sauce</p>
+                            <p className='p-2 text-xs md:text-sm'>in a spicy tomato sauce</p>
                             <p className='p-2'>$380</p>
                             <a href="#" className="mx-3 font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</a>
                             <div className="absolute bottom-2.5 right-5 sm:right-5 sm:right-10">
@@ -68,7 +68,7 @@ function OnlineOrder() {
                     <div className='gap-6 grid place-items-center p-2 grid-cols-1 lg:grid-cols-2 gap-2 xl:gap-6 mt-8'>
                         <div className='relative text-left text-xl lg:text-2xl h-full w-4/5 p-2 rounded-lg bg-white border-solid border-2 border-light-gray-500 transform hover:scale-110 hover:shadow-lg hover:border-red-500'>
                             <p className='p-2'>Zuppa Campagnola</p>
-                            <p className='p-2 text-xs sm:text-sm'>
+                            <p className='p-2 text-xs md:text-sm'>
                                 Chicken broth with spinach, cheese and whisked egg
                             </p>
                             <p className='p-2'>$120</p>
@@ -80,7 +80,7 @@ function OnlineOrder() {
                         </div>
                         <div className='relative text-left text-xl lg:text-2xl h-full w-4/5 p-2 rounded-lg  bg-white border-solid border-2 border-light-gray-500 transform hover:scale-110 hover:shadow-lg hover:border-red-500'>
                             <p className='p-2'>Tor Tellini In Brodo Di Pollo</p>
-                            <p className='p-2 text-xs sm:text-sm'>
+                            <p className='p-2 text-xs md:text-sm'>
                                 Chicken broth with home-made sausage and ham tortellini
                             </p>
                             <p className='p-2'>$150</p>
@@ -97,7 +97,7 @@ function OnlineOrder() {
                     <div className='gap-6 grid place-items-center p-2 grid-cols-1 lg:grid-cols-2 gap-2 xl:gap-6 mt-8'>
                         <div className='relative text-left text-xl lg:text-2xl h-full w-4/5 p-2 rounded-lg bg-white border-solid border-2 border-light-gray-500 transform hover:scale-110 hover:shadow-lg hover:border-red-500'>
                             <p className='p-2'>Raw Brussels Sprouts</p>
-                            <p className='p-2 text-xs sm:text-sm'>
+                            <p className='p-2 text-xs md:text-sm'>
                                 pecorino romano, parsley, grapes, olive oil, sherry vinegar, toasted
                                 almonds
                             </p>
@@ -110,7 +110,7 @@ function OnlineOrder() {
                         </div>
                         <div className='relative text-left text-xl lg:text-2xl h-full w-4/5 p-2 rounded-lg bg-white border-solid border-2 border-light-gray-500 transform hover:scale-110 hover:shadow-lg hover:border-red-500'>
                             <p className='p-2'>Honey Gem</p>
-                            <p className='p-2 text-xs sm:text-sm'>
+                            <p className='p-2 text-xs md:text-sm'>
                                 padron peppers, capers, olives, celery, cherry tomato, chives, tuna
                                 vinaigrette
                             </p>
@@ -128,7 +128,7 @@ function OnlineOrder() {
                     <div className='gap-6 grid place-items-center p-2 grid-cols-1 lg:grid-cols-2 gap-2 xl:gap-6 mt-8'>
                         <div className='text-left text-xl lg:text-2xl h-full w-4/5 p-2 rounded-lg bg-white border-solid border-2 border-light-gray-500 transform hover:scale-110 hover:shadow-lg hover:border-red-500'>
                             <p className='p-2'>Maccheroni</p>
-                            <p className='p-2 text-xs sm:text-sm'>meat sauce, basil, parmesan</p>
+                            <p className='p-2 text-xs md:text-sm'>meat sauce, basil, parmesan</p>
                             <p className='p-2'>$280</p>
                             <a href="#" className="mx-3 font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</a>
                             <div className="absolute bottom-2.5 right-5 sm:right-10">
@@ -138,7 +138,7 @@ function OnlineOrder() {
                         </div>
                         <div className='relative text-left text-xl lg:text-2xl h-full w-4/5 p-2 rounded-lg bg-white border-solid border-2 border-light-gray-500 transform hover:scale-110 hover:shadow-lg hover:border-red-500'>
                             <p className='p-2'>Rigatoni</p>
-                            <p className='p-2 text-xs sm:text-sm'>vodka sauce, chili flake, basil, fresh ricotta</p>
+                            <p className='p-2 text-xs md:text-sm'>vodka sauce, chili flake, basil, fresh ricotta</p>
                             <p className='p-2'>$290</p>
                             <a href="#" className="mx-3 font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</a>
                             <div className="absolute bottom-2.5 right-5 sm:right-10">
@@ -148,7 +148,7 @@ function OnlineOrder() {
                         </div>
                         <div className='relative text-left text-xl lg:text-2xl h-full w-4/5 p-2 rounded-lg bg-white border-solid border-2 border-light-gray-500 transform hover:scale-110 hover:shadow-lg hover:border-red-500'>
                             <p className='p-2'>Lasagne</p>
-                            <p className='p-2 text-xs sm:text-sm'>
+                            <p className='p-2 text-xs md:text-sm'>
                                 italian sausage, meat sauce, parmesan, locatelli
                             </p>
                             <p className='p-2'>$300</p>
@@ -160,7 +160,7 @@ function OnlineOrder() {
                         </div>
                         <div className='relative text-left text-xl lg:text-2xl h-full w-4/5 p-2 rounded-lg bg-white border-solid border-2 border-light-gray-500 transform hover:scale-110 hover:shadow-lg hover:border-red-500'>
                             <p className='p-2'>Ravioli</p>
-                            <p className='p-2 text-xs sm:text-sm'>kabocha squash, hazelnuts, brown butter</p>
+                            <p className='p-2 text-xs md:text-sm'>kabocha squash, hazelnuts, brown butter</p>
                             <p className='p-2'>$280</p>
                             <a href="#" className="mx-3 font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</a>
                             <div className="absolute bottom-2.5 right-5 sm:right-10">
@@ -175,7 +175,7 @@ function OnlineOrder() {
                     <div className='gap-6 grid place-items-center p-2 grid-cols-1 lg:grid-cols-2 gap-2 xl:gap-6 mt-8'>
                         <div className='relative text-left text-xl lg:text-2xl h-full w-4/5 p-2 rounded-lg bg-white border-solid border-2 border-light-gray-500 transform hover:scale-110 hover:shadow-lg hover:border-red-500'>
                             <p className='p-2'>Pizza Margherita</p>
-                            <p className='p-2 text-xs sm:text-sm'>Homemade Pizza Sauce, Mozzarella And Fresh Basil</p>
+                            <p className='p-2 text-xs md:text-sm'>Homemade Pizza Sauce, Mozzarella And Fresh Basil</p>
                             <p className='p-2'>$230</p>
                             <a href="#" className="mx-3 font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</a>
                             <div className="absolute bottom-2.5 right-5 sm:right-10">
@@ -185,7 +185,7 @@ function OnlineOrder() {
                         </div>
                         <div className='relative text-left text-xl lg:text-2xl h-full w-4/5 p-2 rounded-lg bg-white border-solid border-2 border-light-gray-500 transform hover:scale-110 hover:shadow-lg hover:border-red-500'>
                             <p className='p-2'>Pizza Diavola</p>
-                            <p className='p-2 text-xs sm:text-sm'>Homemade Pizza Sauce, Mozzarella, Spicy Salame, Spicy Olive Oil And Hot Pepper Flakes</p>
+                            <p className='p-2 text-xs md:text-sm'>Homemade Pizza Sauce, Mozzarella, Spicy Salame, Spicy Olive Oil And Hot Pepper Flakes</p>
                             <p className='p-2'>$240</p>
                             <a href="#" className="mx-3 font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</a>
                             <div className="absolute bottom-2.5 right-5 sm:right-10">
@@ -200,7 +200,7 @@ function OnlineOrder() {
                     <div className='gap-6 grid place-items-center p-2 grid-cols-1 lg:grid-cols-2 gap-2 xl:gap-6 mt-8'>
                         <div className='relative text-left text-xl lg:text-2xl h-full w-4/5 p-2 rounded-lg bg-white border-solid border-2 border-light-gray-500 transform hover:scale-110 hover:shadow-lg hover:border-red-500'>
                             <p className='p-2'>T-Bone</p>
-                            <p className='p-2 text-xs sm:text-sm'>24oz, Caterina’s Oil</p>
+                            <p className='p-2 text-xs md:text-sm'>24oz, Caterina’s Oil</p>
                             <p className='p-2'>$480</p>
                             <a href="#" className="mx-3 font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</a>
                             <div className="absolute bottom-2.5 right-5 sm:right-10">
@@ -210,7 +210,7 @@ function OnlineOrder() {
                         </div>
                         <div className='relative text-left text-xl lg:text-2xl h-full w-4/5 p-2 rounded-lg bg-white border-solid border-2 border-light-gray-500 transform hover:scale-110 hover:shadow-lg hover:border-red-500'>
                             <p className='p-2'>Veal Chop Milanese</p>
-                            <p className='p-2 text-xs sm:text-sm'>
+                            <p className='p-2 text-xs md:text-sm'>
                                 Cook's Garden - sorrel, mustard greens, dandelion, fennel, radish,
                                 lemon
                             </p>
@@ -223,7 +223,7 @@ function OnlineOrder() {
                         </div>
                         <div className='relative text-left text-xl lg:text-2xl h-full w-4/5 p-2 rounded-lg bg-white border-solid border-2 border-light-gray-500 transform hover:scale-110 hover:shadow-lg hover:border-red-500'>
                             <p className='p-2'>Pork Chop</p>
-                            <p className='p-2 text-xs sm:text-sm'>
+                            <p className='p-2 text-xs md:text-sm'>
                                 fried fingerling potatoes, olives, roasted shallots, capers, garlic,
                                 balsamic vinegar, fresh herbs
                             </p>
@@ -236,7 +236,7 @@ function OnlineOrder() {
                         </div>
                         <div className='relative text-left text-xl lg:text-2xl h-full w-4/5 p-2 rounded-lg bg-white border-solid border-2 border-light-gray-500 transform hover:scale-110 hover:shadow-lg hover:border-red-500'>
                             <p className='p-2'>Roasted Chicken</p>
-                            <p className='p-2 text-xs sm:text-sm'>
+                            <p className='p-2 text-xs md:text-sm'>
                                 creamed polenta, kale, calabrian chilies, shallots, maitake
                                 mushrooms
                             </p>
@@ -254,7 +254,7 @@ function OnlineOrder() {
                     <div className='gap-6 grid place-items-center p-2 grid-cols-1 lg:grid-cols-2 gap-2 xl:gap-6 mt-8'>
                         <div className='relative text-left text-xl lg:text-2xl h-full w-4/5 p-2 rounded-lg'>
                             <p className='p-2'>Affogato</p>
-                            <p className='p-2 text-xs sm:text-sm'>vanilla gelato, espresso</p>
+                            <p className='p-2 text-xs md:text-sm'>vanilla gelato, espresso</p>
                             <p className='p-2'>$120</p>
                             <a href="#" className="mx-3 font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</a>
                             <div className="absolute bottom-2.5 right-5 sm:right-10">
@@ -264,7 +264,7 @@ function OnlineOrder() {
                         </div>
                         <div className='relative text-left text-xl lg:text-2xl h-full w-4/5 p-2 rounded-lg bg-white border-solid border-2 border-light-gray-500 transform hover:scale-110 hover:shadow-lg hover:border-red-500'>
                             <p className='p-2'>Sicilian Ice Cream Sandwich</p>
-                            <p className='p-2 text-xs sm:text-sm'>pistachio butter, brioche bun</p>
+                            <p className='p-2 text-xs md:text-sm'>pistachio butter, brioche bun</p>
                             <p className='p-2'>$80</p>
                             <a href="#" className="mx-3 font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</a>
                             <div className="absolute bottom-2.5 right-5 sm:right-10">
@@ -274,7 +274,7 @@ function OnlineOrder() {
                         </div>
                         <div className='relative text-left text-xl lg:text-2xl h-full w-4/5 p-2 rounded-lg bg-white border-solid border-2 border-light-gray-500 transform hover:scale-110 hover:shadow-lg hover:border-red-500'>
                             <p className='p-2'>Chocolate Panna Cotta</p>
-                            <p className='p-2 text-xs sm:text-sm'>with espresso crumble</p>
+                            <p className='p-2 text-xs md:text-sm'>with espresso crumble</p>
                             <p className='p-2'>$120</p>
                             <a href="#" className="mx-3 font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</a>
                             <div className="absolute bottom-2.5 right-5 sm:right-10">
@@ -284,7 +284,7 @@ function OnlineOrder() {
                         </div>
                         <div className='relative text-left text-xl lg:text-2xl h-full w-4/5 p-2 rounded-lg bg-white border-solid border-2 border-light-gray-500 transform hover:scale-110 hover:shadow-lg hover:border-red-500'>
                             <p className='p-2'>Tiramisu</p>
-                            <p className='p-2 text-xs sm:text-sm'>rum, mascarpone, espresso cookie, cocoa</p>
+                            <p className='p-2 text-xs md:text-sm'>rum, mascarpone, espresso cookie, cocoa</p>
                             <p className='p-2'>$120</p>
                             <a href="#" className="mx-3 font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</a>
                             <div className="absolute bottom-2.5 right-5 sm:right-10">
@@ -391,7 +391,7 @@ function OnlineOrder() {
                     <div className='gap-6 grid place-items-center p-2 grid-cols-1 lg:grid-cols-2 gap-2 xl:gap-6 mt-8'>
                     <div className='relative text-left text-xl lg:text-2xl h-full w-4/5 p-2 rounded-lg bg-white border-solid border-2 border-light-gray-500 transform hover:scale-110 hover:shadow-lg hover:border-red-500'>
                             <p className='p-2'>The West Side</p>
-                            <p className='p-2 text-xs sm:text-sm'>
+                            <p className='p-2 text-xs md:text-sm'>
                                 vodka, orgeat, mint, cucumber, lime, angostura bitters
                             </p>
                             <p className='p-2'>$150</p>
@@ -403,7 +403,7 @@ function OnlineOrder() {
                         </div>
                         <div className='relative text-left text-xl lg:text-2xl h-full w-4/5 p-2 rounded-lg bg-white border-solid border-2 border-light-gray-500 transform hover:scale-110 hover:shadow-lg hover:border-red-500'>
                             <p className='p-2'>Sierra Norte</p>
-                            <p className='p-2 text-xs sm:text-sm'>mezcal, aperol, pineapple, lemon</p>
+                            <p className='p-2 text-xs md:text-sm'>mezcal, aperol, pineapple, lemon</p>
                             <p className='p-2'>$150</p>
                             <a href="#" className="mx-3 font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</a>
                             <div className="absolute bottom-2.5 right-5 sm:right-10">
@@ -413,7 +413,7 @@ function OnlineOrder() {
                         </div>
                         <div className='relative text-left text-xl lg:text-2xl h-full w-4/5 p-2 rounded-lg bg-white border-solid border-2 border-light-gray-500 transform hover:scale-110 hover:shadow-lg hover:border-red-500'>
                             <p className='p-2'>Atomic Old Fashioned</p>
-                            <p className='p-2 text-xs sm:text-sm'>eagle rare single bourbon, bitters, sugar</p>
+                            <p className='p-2 text-xs md:text-sm'>eagle rare single bourbon, bitters, sugar</p>
                             <p className='p-2'>$150</p>
                             <a href="#" className="mx-3 font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</a>
                             <div className="absolute bottom-2.5 right-5 sm:right-10">
@@ -423,7 +423,7 @@ function OnlineOrder() {
                         </div>
                         <div className='relative text-left text-xl lg:text-2xl h-full w-4/5 p-2 rounded-lg bg-white border-solid border-2 border-light-gray-500 transform hover:scale-110 hover:shadow-lg hover:border-red-500'>
                             <p className='p-2'>Paloma</p>
-                            <p className='p-2 text-xs sm:text-sm'>reposado tequila, grapefruit, lime, tonic, salt</p>
+                            <p className='p-2 text-xs md:text-sm'>reposado tequila, grapefruit, lime, tonic, salt</p>
                             <p className='p-2'>$150</p>
                             <a href="#" className="mx-3 font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</a>
                             <div className="absolute bottom-2.5 right-5 sm:right-10">
@@ -502,7 +502,7 @@ function OnlineOrder() {
                     <Cart />
                 </div>
 
-                <div className='fixed top-0 left-0 w-full h-full pt-24 pb-2'>
+                <div className='fixed top-0 left-0 h-full pt-4 pb-2'>
                     <div className='md:hidden border-red-500 mx-auto border-2 rounded-lg shadow-lg relative left-2 z-50 bg-gray-50 inline-block max-h-full overflow-x-auto'>
                         <button
                             onClick={() => setIsCartOpen(!isCartOpen)}

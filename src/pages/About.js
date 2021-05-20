@@ -18,6 +18,7 @@ function About() {
             <img
               className='w-28 h-28  object-cover rounded-full border-2 border-indigo-500'
               src='http://daiduongrestaurant.com/wp-content/uploads/2019/12/BRT00145a.jpg'
+              alt='pepsi'
             />
           </div>
           <div>
@@ -32,6 +33,7 @@ function About() {
             <img
               className='w-28 h-28 object-cover rounded-full border-2 border-indigo-500'
               src='https://upload.cc/i1/2021/05/10/wGmFIN.jpg'
+              alt="rabbit"
             />
           </div>
           <div>
@@ -48,6 +50,7 @@ function About() {
             <img
               className='w-28 h-28 place-items-center object-cover rounded-full border-2 border-indigo-500'
               src='https://upload.cc/i1/2021/05/14/K98ocl.png'
+              alt="white"
             />
           </div>
           <div>
@@ -64,6 +67,7 @@ function About() {
             <img
               className='w-28 h-28 object-cover rounded-full border-2 border-indigo-500'
               src='https://upload.cc/i1/2021/05/14/CfnypJ.png'
+              alt="mao"
             />
           </div>
           <div>
@@ -80,6 +84,7 @@ function About() {
             <img
               className='w-28 h-28 object-cover rounded-full border-2 border-indigo-500'
               src='https://upload.cc/i1/2021/05/14/xtQpFO.jpg'
+              alt="cafe"
             />
           </div>
           <div>
@@ -96,6 +101,7 @@ function About() {
             <img
               className='w-28 h-28 object-cover rounded-full border-2 border-indigo-500'
               src='https://upload.cc/i1/2021/05/14/YCABqV.jpg'
+              alt="waitres"
             />
           </div>
           <div>
@@ -112,6 +118,7 @@ function About() {
             <img
               className='w-28 h-28 object-cover rounded-full border-2 border-indigo-500'
               src='https://upload.cc/i1/2021/05/14/g3NKR5.jpg'
+              alt="waiter"
             />
           </div>
           <div>

@@ -258,7 +258,7 @@ function Cart() {
                     Pick up or Delivery?
                 </label>
                 <select
-                    className="h-full rounded-lg border block appearance-none w-full bg-white border-gray-400 text-gray-700 py-2 px-4 pr-8 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                    className="h-full rounded-lg border block appearance-none w-full bg-white border-gray-400 text-gray-700 py-2 px-4 pr-8 focus:outline-none focus:bg-white focus:border-gray-500">
                     <option value="5">Pick UP</option>
                     <option value="10">Delivery</option>
                 </select>

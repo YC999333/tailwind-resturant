@@ -18,10 +18,6 @@ module.exports = {
         'drink-image':
           "linear-gradient(rgba(9,2,19, 0.8), rgba(9,2,19, 0.8)),url('https://upload.cc/i1/2021/05/14/EoOKdD.jpg')",
       }),
-      transitionDuration: {
-        '0': '0ms',
-        '2000': '2000ms',
-       }
     },
   },
   variants: {

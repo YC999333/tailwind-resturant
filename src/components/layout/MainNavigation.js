@@ -258,12 +258,24 @@ function MainNavigation() {
                 >
                   Sign In
                 </a>
-                <a
-                  href='#'
-                  className='text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'
-                >
-                  User
-                </a>
+                <div className='relative group'>
+                    <button className='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium'>
+                      <span>User</span>
+                    </button>
+                    <div class='w-28 h-auto absolute top-15 z-20 p-4 hidden bg-gray-300 rounded-lg group-hover:block'>
+                      <div className='grid gap-2 p-1 grid-cols-1 grid-rows-2'>
+                        <a className='p-1 text-sm font-semibold' href='/'>
+                          Profile
+                        </a>
+                        <a className='p-1 text-sm font-semibold' href='/'>
+                          Order
+                        </a>
+                        <a className='p-1 text-sm font-semibold' href='/'>
+                          Sign Out
+                        </a>
+                      </div>
+                    </div>
+                  </div>
               </div>
             </div>
           )}

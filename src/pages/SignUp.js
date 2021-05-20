@@ -107,7 +107,11 @@ function SignUp() {
                 },
               })}
             />
-
+            {errors.confirmPassword && (
+              <p className="text-red-500 mb-2">
+                {errors.confirmPassword.message}
+              </p>
+            )}
             <button
               type="submit"
               className="w-full text-center py-3 rounded bg-green-500 text-white hover:bg-green-dark focus:outline-none my-1"

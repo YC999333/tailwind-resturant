@@ -24,7 +24,7 @@ function About() {
             <h2 className='text-gray-800 text-lg text-center font-semibold p-4'>
               Co-Founder
             </h2>
-            <p className='text-gray-600 text-center p-4'>擁有豐富管理經驗</p>
+            <p className='text-gray-600 text-center p-4'>在美國多年，熟悉各國料理，專長是巴西料理</p>
           </div>
         </div>
         <div className='w-10/12 h-4/6 max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20 transform hover:scale-110'>

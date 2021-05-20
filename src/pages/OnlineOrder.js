@@ -1133,8 +1133,8 @@ function OnlineOrder() {
           <Cart />
         </div>
 
-        <div className="fixed top-0 left-0 w-3/5 h-full pt-24 pb-2">
-          <div className="md:hidden border-red-500 mx-auto border-2 rounded-lg shadow-lg relative left-2 z-50 bg-gray-50 inline-block max-h-full overflow-x-auto">
+        <div className="md:hidden fixed top-0 left-0 w-3/5 h-full pt-24 pb-2">
+          <div className="border-red-500 mx-auto border-2 rounded-lg shadow-lg relative left-2 z-50 bg-gray-50 inline-block max-h-full overflow-x-auto">
             <button
               onClick={() => setIsCartOpen(!isCartOpen)}
               className="text-2xl w-10 h-10"

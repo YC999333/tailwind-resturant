@@ -15,19 +15,17 @@ const addItemToCart = (state, item) => {
   return { ...state, carts: copy };
 };
 
-const removeItemFromCart = (state, item) => {
+const removeItemFromCart = (state, itemId) => {
   const copy = [...state.carts];
-  const currItemIndex = copy.findIndex((i) => i.item.id === item.id);
+  const currItemIndex = copy.findIndex((i) => i.item.id === itemId);
 
-  if (currItemIndex > 0) {
-    const currItem = { ...copy[currItemIndex] };
-    currItem.quantity--;
+  const currItem = { ...copy[currItemIndex] };
+  currItem.quantity--;
 
-    if (currItem.quantity <= 0) {
-      copy.splice(currItem, 1);
-    } else {
-      copy[currItemIndex] = currItem;
-    }
+  if (currItem.quantity <= 0) {
+    copy.splice(currItem, 1);
+  } else {
+    copy[currItemIndex] = currItem;
   }
 
   return { ...state, carts: copy };

@@ -1,6 +1,10 @@
 import CartItem from "./CartItem";
+import { useContext } from "react";
+import Context from "./Context/Context";
 
-function Cart({ carts, removeItemFromCart, clearCart }) {
+function Cart({ carts }) {
+  const context = useContext(Context);
+
   return (
     <div className="overflow-y-auto bg-white p-2 m-10 shadow-lg rounded-lg">
       <div id="summary" className="w-full px-4 py-10">
@@ -10,8 +14,7 @@ function Cart({ carts, removeItemFromCart, clearCart }) {
             <CartItem
               cartItem={cart.item}
               qty={cart.quantity}
-              removeItemFromCart={removeItemFromCart}
-              clearCart={clearCart}
+              removeItemFromCart={context.removeItemFromCart}
             />
           );
         })}

@@ -23,9 +23,9 @@ function OnlineOrder() {
 
   const context = useContext(Context);
 
-  useEffect(() => {
-    console.log(context);
-  }, [context]);
+  // useEffect(() => {
+  //   console.log(context);
+  // }, [context]);
 
   return (
     <div className="bg-gray-50 text-gray-800 p-1">

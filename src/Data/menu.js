@@ -35,7 +35,7 @@ const menu = {
     },
     {
       id: "soup2",
-      title: "Tor Tellini In Brodo Di Pollo",
+      title: "Tor Tellini Di Pollo",
       description: "Chicken broth with home-made sausage and ham tortellini",
       price: "150",
     },

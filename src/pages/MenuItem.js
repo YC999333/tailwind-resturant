@@ -24,7 +24,7 @@ function MenuItem({ ...props }) {
               addItemToCart({ ...props });
               e.preventDefault();
             }}
-            className="border text-center w-10 text-xs rounded-lg mx-2 trasmform hover:border-red-500"
+            className="absolute bottom-2 right-0.5 border text-center w-20 h-7 text-sm rounded-lg mx-2 trasmform hover:border-red-500"
           >
             Add
           </button>

@@ -40,7 +40,7 @@ function OnlineOrder() {
           <p className="text-center mb-12 uppercase underline text-2xl">
             ANTIPASTI (前菜)
           </p>
-          <div className="gap-7 lg:gap-6 grid place-items-center p-2 grid-cols-1 lg:grid-cols-2 gap-2 xl:gap-6 mt-8">
+          <div className="gap-7 lg:gap-7 lg:gap-6 grid place-items-center p-2 grid-cols-1 lg:grid-cols-2 mt-8">
             {antipasti.map((a) => {
               return (
                 <MenuItem
@@ -57,7 +57,7 @@ function OnlineOrder() {
           <p className="text-center mb-30 uppercase underline text-2xl mt-20">
             Soup (湯品)
           </p>
-          <div className="gap-6 grid place-items-center p-2 grid-cols-1 lg:grid-cols-2 gap-2 xl:gap-6 mt-8">
+          <div className="gap-7 lg:gap-7 lg:gap-6 grid place-items-center p-2 grid-cols-1 lg:grid-cols-2 mt-8">
             {soup.map((s) => {
               return (
                 <MenuItem
@@ -74,7 +74,7 @@ function OnlineOrder() {
           <p className="text-center mb-30 uppercase underline text-2xl mt-20">
             Salad (沙拉)
           </p>
-          <div className="gap-6 grid place-items-center p-2 grid-cols-1 lg:grid-cols-2 gap-2 xl:gap-6 mt-8">
+          <div className="gap-7 lg:gap-7 lg:gap-6 grid place-items-center p-2 grid-cols-1 lg:grid-cols-2 mt-8">
             {salad.map((s) => {
               return (
                 <MenuItem
@@ -91,7 +91,7 @@ function OnlineOrder() {
           <p className="text-center mb-30 uppercase underline text-2xl mt-20">
             Pasta
           </p>
-          <div className="gap-6 grid place-items-center p-2 grid-cols-1 lg:grid-cols-2 gap-2 xl:gap-6 mt-8">
+          <div className="gap-7 lg:gap-6 grid place-items-center p-2 grid-cols-1 lg:grid-cols-2 mt-8">
             {pasta.map((p) => {
               return (
                 <MenuItem
@@ -108,7 +108,7 @@ function OnlineOrder() {
           <p className="text-center mb-30 uppercase underline text-2xl mt-20">
             Pizza
           </p>
-          <div className="gap-6 grid place-items-center p-2 grid-cols-1 lg:grid-cols-2 gap-2 xl:gap-6 mt-8">
+          <div className="gap-7 lg:gap-6 grid place-items-center p-2 grid-cols-1 lg:grid-cols-2 mt-8">
             {pizza.map((p) => {
               return (
                 <MenuItem
@@ -125,7 +125,7 @@ function OnlineOrder() {
           <p className="text-center mb-30 uppercase underline text-2xl mt-20">
             Main (主菜)
           </p>
-          <div className="gap-6 grid place-items-center p-2 grid-cols-1 lg:grid-cols-2 gap-2 xl:gap-6 mt-8">
+          <div className="gap-7 lg:gap-6 grid place-items-center p-2 grid-cols-1 lg:grid-cols-2 mt-8">
             {main.map((m) => {
               return (
                 <MenuItem
@@ -142,7 +142,7 @@ function OnlineOrder() {
           <p className="text-center mb-30 uppercase underline text-2xl mt-20">
             Desert (甜點)
           </p>
-          <div className="gap-6 grid place-items-center p-2 grid-cols-1 lg:grid-cols-2 gap-2 xl:gap-6 mt-8">
+          <div className="gap-7 lg:gap-6 grid place-items-center p-2 grid-cols-1 lg:grid-cols-2 mt-8">
             {desert.map((d) => {
               return (
                 <MenuItem
@@ -163,7 +163,7 @@ function OnlineOrder() {
           <p className="text-center mb-12 uppercase underline text-2xl mt-20">
             Red Wine (By Bottle)
           </p>
-          <div className="gap-6 grid place-items-center p-2 grid-cols-1 lg:grid-cols-2 gap-2 xl:gap-6 mt-8">
+          <div className="gap-7 lg:gap-6 grid place-items-center p-2 grid-cols-1 lg:grid-cols-2 mt-8">
             {redWine.map((r) => {
               return (
                 <MenuItem
@@ -180,7 +180,7 @@ function OnlineOrder() {
           <p className="text-center mb-30 uppercase underline text-2xl mt-20">
             White Wine (By Bottle)
           </p>
-          <div className="gap-6 grid place-items-center p-2 grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-2 xl:gap-6 mt-8">
+          <div className="gap-7 lg:gap-6 grid place-items-center p-2 grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 mt-8">
             {whiteWine.map((w) => {
               return (
                 <MenuItem
@@ -197,7 +197,7 @@ function OnlineOrder() {
           <p className="text-center mb-30 uppercase underline text-2xl mt-20">
             Cocktails
           </p>
-          <div className="gap-6 grid place-items-center p-2 grid-cols-1 lg:grid-cols-2 gap-2 xl:gap-6 mt-8">
+          <div className="gap-7 lg:gap-6 grid place-items-center p-2 grid-cols-1 lg:grid-cols-2 mt-8">
             {cocktail.map((c) => {
               return (
                 <MenuItem
@@ -214,7 +214,7 @@ function OnlineOrder() {
           <p className="text-center mb-30 uppercase underline text-2xl mt-20">
             Draft Beer
           </p>
-          <div className="gap-6 grid place-items-center p-2 grid-cols-1 lg:grid-cols-2 gap-2 xl:gap-6 mt-8">
+          <div className="gap-7 lg:gap-6 grid place-items-center p-2 grid-cols-1 lg:grid-cols-2 mt-8">
             {beer.map((b) => {
               return (
                 <MenuItem
@@ -231,7 +231,7 @@ function OnlineOrder() {
           <p className="text-center mb-30 uppercase underline text-2xl mt-20">
             Non Alcoholic
           </p>
-          <div className="gap-6 grid place-items-center p-2 grid-cols-1 lg:grid-cols-2 gap-2 xl:gap-6 mt-8">
+          <div className="gap-7 lg:gap-6 grid place-items-center p-2 grid-cols-1 lg:grid-cols-2 mt-8">
             {nonAlcohol.map((n) => {
               return (
                 <MenuItem
@@ -251,16 +251,20 @@ function OnlineOrder() {
           <Cart carts={context.carts} />
         </div>
 
-        <div className="md:hidden fixed top-0 left-0 w-3/5 h-full pt-24 pb-2">
-          <div className="bg-opacity-0 mx-auto border-2 rounded-lg shadow-lg left-0 z-50 bg-gray-50 inline-block max-h-full overflow-x-auto">
-            <button
-              onClick={() => setIsCartOpen(!isCartOpen)}
-              className="text-2xl w-10 h-10"
-            >
-              <i className="far fa-shopping-cart"></i>
-            </button>
+        <div
+          id="cart"
+          className="md:hidden fixed top-0 left-0 w-88 h-full pt-24 pb-2"
+        >
+          <button className="text-2xl w-10 h-10">
+            <i className="far fa-shopping-cart"></i>
+          </button>
 
-            {isCartOpen ? <Cart carts={context.carts} /> : null}
+          <div
+            id="show-cart"
+            className="hidden border-2 rounded-lg shadow-lg z-50 inline-block max-h-full overflow-x-auto"
+          >
+            <div className="h-2"></div>
+            <Cart carts={context.carts} />
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 html,
 body,
@@ -9,13 +9,12 @@ body,
   width: 100%;
 }
 
-
 .text-shadow {
   text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .dropdown:focus-within .dropdown-menu {
-  opacity:1;
+  opacity: 1;
   transform: translate(0) scale(1);
   visibility: visible;
 }

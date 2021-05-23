@@ -19,19 +19,21 @@ function SignIn() {
       confirmPassword: data.confirmPassword,
     });
     try {
-      const response = await axios("https://localhost:5000/auth/signin", {
+      const response = await axios("http://localhost:5000/auth/signin", {
         headers: { "content-type": "application/json" },
         data: formData,
-        method: "PUT",
+        method: "POST",
       });
 
       if (response.status === 200 || response.status === 201) {
         history.push("/");
+      } else {
+        history.push("/signin");
       }
     } catch (error) {
       if (error.response) {
         console.log(error.response.data);
-        setServerError(error.response);
+        setServerError(error.response.data.message);
       }
       console.log(error);
     }

@@ -29,7 +29,7 @@ function OnlineOrder() {
 
   return (
     <div className="bg-gray-50 text-gray-800 p-1">
-      <div className="relative grid p-4 grid-cols-1 md:grid-cols-9 lg:grid-cols-6 gap-4">
+      <div className="relative grid p-4 grid-cols-1 md:grid-cols-9 lg:grid-cols-7 gap-4">
         <div className="grid md:col-span-5 lg:col-span-4">
           <p className="text-center mb-24 uppercase text-4xl font-bold mt-10">
             Online Order
@@ -247,7 +247,7 @@ function OnlineOrder() {
           </div>
         </div>
 
-        <div className="fixed right-5 md:w-2/5 lg:w-2/6 grid hidden md:block md:col-span-4 lg:col-span-2 mt-4 h-screen">
+        <div className="fixed right-5 md:w-2/5 lg:w-5/8 grid hidden md:block md:col-span-4 lg:col-span-3 mt-4 h-full overflow-x-auto pb-20">
           <Cart carts={context.carts} />
         </div>
 

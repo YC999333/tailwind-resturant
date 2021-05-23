@@ -6,9 +6,11 @@ function Cart({ carts }) {
   const context = useContext(Context);
 
   return (
-    <div className="bg-white border border-indigo-500 pt-4 px-4 my-3 mx-5 sm:m-10 shadow-lg rounded-lg">
-      <div id="summary" className="w-full px-4 py-10">
-        <h1 className="font-semibold text-2xl border-b pb-8">Order Summary</h1>
+    <div className="bg-white mx-auto border border-indigo-500 pt-4 px-4 md:px-2 my-3 rounded-lg">
+      <div id="summary" className="w-full px-2 py-10">
+        <h1 className="font-semibold text-center text-2xl border-b pb-8">
+          Order Summary
+        </h1>
         {carts.map((cart) => {
           return (
             <CartItem

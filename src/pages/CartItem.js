@@ -7,7 +7,7 @@ function CartItem({ cartItem, qty, removeItemFromCart }) {
 
   return (
     <div className="flex sm:flex-1 w-56 items-center justify-between mt-10 mb-5">
-      <span className="font-semibold text-sm uppercase">{cartItem.title}</span>
+      <span className="font-semibold text-sm w-28">{cartItem.title}</span>
       <input
         type="number"
         min="1"

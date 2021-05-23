@@ -251,17 +251,14 @@ function OnlineOrder() {
           <Cart carts={context.carts} />
         </div>
 
-        <div
-          id="cart"
-          className="md:hidden fixed top-0 left-0 w-88 h-full pt-24 pb-2"
-        >
+        <div id="cart" className="md:hidden fixed top-0 left-0 h-full pt-24">
           <button className="text-2xl w-10 h-10">
             <i className="far fa-shopping-cart"></i>
           </button>
 
           <div
             id="show-cart"
-            className="hidden border-2 rounded-lg shadow-lg z-50 inline-block max-h-full overflow-x-auto"
+            className="hidden rounded-lg z-50 max-h-full overflow-x-auto"
           >
             <div className="h-2"></div>
             <Cart carts={context.carts} />

@@ -20,7 +20,7 @@ function Cart({ carts }) {
         })}
 
         <div className="border-t">
-          <label className="font-medium inline-block mt-5 mb-2 text-sm uppercase">
+          <label className="font-medium inline-block mt-5 mb-2 text-sm">
             Pick up or Delivery?
           </label>
           <select className="block p-2 text-gray-600 w-full text-sm">

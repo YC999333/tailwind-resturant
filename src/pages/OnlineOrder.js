@@ -248,11 +248,7 @@ function OnlineOrder() {
         </div>
 
         <div className="fixed right-5 md:w-2/5 lg:w-2/6 grid hidden md:block md:col-span-4 lg:col-span-2 mt-4 h-screen">
-          <Cart
-            carts={context.carts}
-            removeItemCart={context.removeItemFromCart}
-            clearCart={context.clearCart}
-          />
+          <Cart carts={context.carts} />
         </div>
 
         <div className="md:hidden fixed top-0 left-0 w-3/5 h-full pt-24 pb-2">
@@ -264,7 +260,7 @@ function OnlineOrder() {
               <i className="far fa-shopping-cart"></i>
             </button>
 
-            {isCartOpen ? <Cart /> : null}
+            {isCartOpen ? <Cart carts={context.carts} /> : null}
           </div>
         </div>
       </div>

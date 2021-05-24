@@ -23,14 +23,10 @@ function OnlineOrder() {
 
   const context = useContext(Context);
 
-  // useEffect(() => {
-  //   console.log(context);
-  // }, [context]);
-
   return (
     <div className="bg-gray-50 text-gray-800 p-1">
-      <div className="relative grid p-4 grid-cols-1 md:grid-cols-9 lg:grid-cols-7 gap-4">
-        <div className="grid md:col-span-5 lg:col-span-4">
+      <div className="relative grid p-4 grid-cols-1 md:grid-cols-9 lg:grid-cols-9 xl:grid-cols-8 gap-4">
+        <div className="grid md:col-span-5 lg:col-span-6 xl:col-span-5">
           <p className="text-center mb-24 uppercase text-4xl font-bold mt-10">
             Online Order
           </p>
@@ -247,11 +243,14 @@ function OnlineOrder() {
           </div>
         </div>
 
-        <div className="fixed right-5 md:w-2/5 lg:w-5/8 grid hidden md:block md:col-span-4 lg:col-span-3 mt-4 h-full overflow-x-auto pb-20">
-          <Cart carts={context.carts} />
+        <div className="fixed right-5 w-80 xl:w-96 xl:px-10 grid hidden md:block md:col-span-4 lg:col-span-3 mt-4 h-full overflow-x-auto pb-20">
+          <Cart />
         </div>
 
-        <div id="cart" className="md:hidden fixed top-0 left-0 h-full pt-24">
+        <div
+          id="cart"
+          className="md:hidden fixed top-0 left-0 h-full sm:pt-24 pt-28"
+        >
           <button className="text-2xl w-10 h-10">
             <i className="far fa-shopping-cart"></i>
           </button>
@@ -261,7 +260,7 @@ function OnlineOrder() {
             className="hidden rounded-lg z-50 max-h-full overflow-x-auto"
           >
             <div className="h-2"></div>
-            <Cart carts={context.carts} />
+            <Cart />
           </div>
         </div>
       </div>

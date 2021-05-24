@@ -1,9 +1,25 @@
-import CartItem from "./CartItem";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import Context from "./Context/Context";
 
-function Cart({ carts }) {
+function Cart() {
   const context = useContext(Context);
+  const [value, setValue] = useState(1);
+  const [selected, setSelected] = useState({ orderOption: "hidden" });
+
+  const getQty = (e) => {
+    e.preventDefault();
+    setValue(e.target.value);
+  };
+
+  const onChange = (e) => {
+    e.preventDefault();
+    setSelected({ orderOption: e.target.value });
+  };
+
+  let total = 0;
+  context.carts.forEach((cart) => {
+    total = total + cart.item.price * cart.quantity;
+  });
 
   return (
     <div className="bg-white mx-auto border border-indigo-500 pt-4 px-4 md:px-2 my-3 rounded-lg">
@@ -11,30 +27,65 @@ function Cart({ carts }) {
         <h1 className="font-semibold text-center text-2xl border-b pb-8">
           Order Summary
         </h1>
-        {carts.map((cart) => {
+        {context.carts.map((cart) => {
           return (
-            <CartItem
-              cartItem={cart.item}
-              qty={cart.quantity}
-              removeItemFromCart={context.removeItemFromCart}
-            />
+            <div
+              key={cart.item.id}
+              className="flex flex-1 w-52 md:w-4/5 mx-auto items-center justify-between mt-10 mb-5"
+            >
+              <span className="font-semibold text-sm md:text-lg mr-3 w-28">
+                {cart.item.title}
+              </span>
+              <input
+                type="number"
+                min="1"
+                className="border rounded-lg w-8 sm:w-10 text-center text-sm lg:text-md hover:border-indigo-500"
+                default={cart.quantity}
+                onChange={getQty}
+                value={value}
+              />
+              <span className="font-semibold mx-3 w-20 text-center text-sm md:text-lg">
+                ${cart.item.price * value}
+              </span>
+
+              <button
+                className="font-semibold w-8 lg:w-12 border rounded-lg hover:border-indigo-500 w-6"
+                onClick={() => context.removeItemFromCart(cart.item.id)}
+              >
+                <i className="lg:text-base text-sm fas fa-minus"></i>
+              </button>
+            </div>
           );
         })}
 
-        <div className="border-t">
+        <div className="border-t py-8">
           <label className="font-medium inline-block mt-5 mb-2 text-sm">
             Pick up or Delivery?
           </label>
-          <select className="block p-2 text-gray-600 w-full text-sm">
-            <option>Pick up</option>
-            <option>Delivery</option>
+          <select
+            onChange={onChange}
+            className="block p-2 text-gray-600 w-full text-sm"
+          >
+            <option value="hidden">Pick up</option>
+            <option value="show">Delivery</option>
           </select>
+          <div
+            className={`${selected.orderOption} absolute w-full flex flex-col mt-2`}
+          >
+            <label htmlFor="Address" className="text-sm mr-3">
+              Your Address
+            </label>
+            <input
+              type="text"
+              className="hover:border rounded-md border-gray-300 w-56 sm:w-4/6 lg:w-4/5 mt-1"
+            />
+          </div>
         </div>
 
         <div className="border-t mt-8">
-          <div className="flex font-semibold justify-between py-6 text-sm uppercase">
+          <div className="flex font-semibold justify-between py-6 text-sm md:text-lg uppercase">
             <span>Total cost</span>
-            <span>$600</span>
+            <span>${total}</span>
           </div>
           <button className="bg-indigo-500 rounded-lg font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">
             Checkout

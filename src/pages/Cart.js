@@ -70,19 +70,17 @@ function Cart() {
             <option value="hidden">Pick up</option>
             <option value="show">Delivery</option>
           </select>
-          <div
-            className={`${selected.orderOption} absolute flex flex-col w-full mt-2`}
-          >
-            <label htmlFor="Address" className="inline-block text-sm mr-3">
+          <div className={`${selected.orderOption} inline-block w-full mt-2`}>
+            <label htmlFor="Address" className="text-sm mr-3">
               Your Address
             </label>
             <input
               type="text"
-              className="hover:border inline-block rounded-md border-gray-300 w-52 mr-1 sm:w-68 lg:w-4/6 mt-1"
+              className="hover:border rounded-md border-gray-300 w-56 mr-1 sm:w-68 lg:w-4/6 mt-1"
             />
           </div>
         </div>
-        <div className="border-t mt-8">
+        <div className="border-t mt-4">
           <div className="flex font-semibold justify-between py-6 text-sm md:text-lg uppercase">
             <span>Total cost</span>
             <span>${total}</span>

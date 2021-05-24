@@ -76,7 +76,7 @@ function Cart() {
             </label>
             <input
               type="text"
-              className="hover:border rounded-md border-gray-300 w-56 mr-1 sm:w-68 lg:w-4/6 mt-1"
+              className="hover:border rounded-md border-gray-300 w-48 mr-1 sm:w-68 lg:w-4/6 mt-1"
             />
           </div>
         </div>

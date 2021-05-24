@@ -249,7 +249,7 @@ function OnlineOrder() {
 
         <div
           id="cart"
-          className="md:hidden fixed top-0 left-0 h-full flex flex-1 sm:pt-24 pt-28"
+          className="md:hidden fixed top-0 left-0 h-full flex sm:pt-24 pt-28"
         >
           <button className="text-2xl w-10 h-10">
             <i className="far fa-shopping-cart"></i>

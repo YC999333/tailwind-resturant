@@ -257,7 +257,7 @@ function OnlineOrder() {
 
           <div
             id="show-cart"
-            className="hidden rounded-lg z-50 max-h-full overflow-x-auto"
+            className="hidden rounded-lg z-50 max-h-full w-72 overflow-x-auto"
           >
             <div className="h-2"></div>
             <Cart />

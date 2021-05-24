@@ -11,14 +11,10 @@ function Book() {
   );
   const [adult, setAdult] = useState(1);
   const [kid, setKid] = useState(0);
-  const [reserved, setReserved] = useState("Time");
 
   const date = startDate.toLocaleString().split(" ");
   const RDate = date[0].toString();
-  const RTime = date[1].toString(navigator.language, {
-    hour: "2-digit",
-    minute: "2-digit",
-  });
+  const RTime = date[1].toString().replace(/(:\d{2}| [AP]M)$/, "");
 
   const onAdultChange = (e) => setAdult(e.target.value);
 
@@ -79,7 +75,7 @@ function Book() {
                           className="w-16 rounded-lg border border-gray-200"
                           type="number"
                           default="1"
-                          min="1"
+                          min="0"
                           onChange={onKidChange}
                           value={kid}
                         />

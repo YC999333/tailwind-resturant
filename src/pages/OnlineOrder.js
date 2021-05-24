@@ -243,13 +243,13 @@ function OnlineOrder() {
           </div>
         </div>
 
-        <div className="fixed right-5 w-80 xl:w-96 xl:px-10 grid hidden md:block md:col-span-4 lg:col-span-3 mt-4 h-full overflow-x-auto pb-20">
+        <div className="fixed right-5 w-80 lg:w-92 xl:w-2/6 xl:px-10 grid hidden md:block md:col-span-4 lg:col-span-3 mt-4 h-full overflow-x-auto pb-20">
           <Cart />
         </div>
 
         <div
           id="cart"
-          className="md:hidden fixed top-0 left-0 h-full sm:pt-24 pt-28"
+          className="md:hidden fixed top-0 left-0 h-full w-4/5 sm:pt-24 pt-28"
         >
           <button className="text-2xl w-10 h-10">
             <i className="far fa-shopping-cart"></i>

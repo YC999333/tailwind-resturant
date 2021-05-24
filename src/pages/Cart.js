@@ -14,6 +14,7 @@ function Cart() {
   const onChange = (e) => {
     e.preventDefault();
     setSelected({ orderOption: e.target.value });
+    console.log(selected.orderOption);
   };
 
   let total = 0;
@@ -70,18 +71,17 @@ function Cart() {
             <option value="show">Delivery</option>
           </select>
           <div
-            className={`${selected.orderOption} absolute w-full flex flex-col mt-2`}
+            className={`${selected.orderOption} absolute flex flex-col w-full mt-2`}
           >
-            <label htmlFor="Address" className="text-sm mr-3">
+            <label htmlFor="Address" className="inline-block text-sm mr-3">
               Your Address
             </label>
             <input
               type="text"
-              className="hover:border rounded-md border-gray-300 w-56 sm:w-4/6 lg:w-4/5 mt-1"
+              className="hover:border inline-block rounded-md border-gray-300 w-52 mr-1 sm:w-68 lg:w-4/6 mt-1"
             />
           </div>
         </div>
-
         <div className="border-t mt-8">
           <div className="flex font-semibold justify-between py-6 text-sm md:text-lg uppercase">
             <span>Total cost</span>

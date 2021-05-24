@@ -7,19 +7,35 @@ import setMinutes from "date-fns/setMinutes";
 function Book() {
   const [person, setPerson] = useState("Person");
   const [startDate, setStartDate] = useState(
-    setHours(setMinutes(new Date(), 30), 16)
+    setHours(setMinutes(new Date(), 30), 11)
   );
+  const [adult, setAdult] = useState(1);
+  const [kid, setKid] = useState(0);
+  const [reserved, setReserved] = useState("Time");
+
+  const date = startDate.toLocaleString().split(" ");
+  const RDate = date[0].toString();
+  const RTime = date[1].toString(navigator.language, {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+
+  const onAdultChange = (e) => setAdult(e.target.value);
+
+  const onKidChange = (e) => setKid(e.target.value);
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log("clicked!");
+    console.log("Reservation Confirmed!");
   };
 
   return (
     <div className="bg-gray-50 pb-20">
       <div>
-        <img className="h-96 w-full object-cover"
-          src="https://upload.cc/i1/2021/05/19/6aHiUp.jpg" alt="reserve"
+        <img
+          className="h-96 w-full object-cover"
+          src="https://upload.cc/i1/2021/05/19/6aHiUp.jpg"
+          alt="reserve"
         />
       </div>
       <form onSubmit={onSubmit}>
@@ -51,6 +67,8 @@ function Book() {
                           type="number"
                           default="1"
                           min="1"
+                          onChange={onAdultChange}
+                          value={adult}
                         />
                       </div>
                     </div>
@@ -62,13 +80,15 @@ function Book() {
                           type="number"
                           default="1"
                           min="1"
+                          onChange={onKidChange}
+                          value={kid}
                         />
                       </div>
                     </div>
                     <div className="pt-4 mx-auto">
                       <button
                         onClick={() => {
-                          setPerson("2 adults");
+                          setPerson(`${adult} Adults, ${kid} Kids`);
                         }}
                         className="block w-5/6 bg-blue-400 rounded-lg font-semibold text-sm text-white mt-4"
                       >
@@ -88,7 +108,9 @@ function Book() {
                     aria-expanded="true"
                     aria-controls="headlessui-menu-items-117"
                   >
-                    <span>Time</span>
+                    <span>
+                      Book at {RTime} on {RDate}
+                    </span>
                   </button>
                 </span>
                 <div className="border rounded-lg w-96 lg:w-full bg-white border-blue-500 opacity-0 dropdown-menu transition-all duration-300">
@@ -98,9 +120,9 @@ function Book() {
                     minDate={startDate}
                     showTimeSelect
                     injectTimes={[
-                      setHours(setMinutes(new Date(), 1), 0),
-                      setHours(setMinutes(new Date(), 5), 12),
-                      setHours(setMinutes(new Date(), 59), 23),
+                      setHours(setMinutes(new Date(), 0), 11),
+
+                      setHours(setMinutes(new Date(), 30), 20),
                     ]}
                     dateFormat="MMMM d, yyyy h:mm aa"
                     popperModifiers={{

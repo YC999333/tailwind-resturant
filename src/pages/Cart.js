@@ -19,7 +19,7 @@ function Cart() {
 
   let total = 0;
   context.carts.forEach((cart) => {
-    total = total + cart.item.price * cart.quantity;
+    total = total + cart.item.price * value;
   });
 
   return (
@@ -41,9 +41,7 @@ function Cart() {
                 type="number"
                 min="1"
                 className="border rounded-lg w-8 sm:w-10 text-center text-sm lg:text-md hover:border-indigo-500"
-                default={cart.quantity}
                 onChange={getQty}
-                value={value}
               />
               <span className="font-semibold mx-3 w-20 text-center text-sm md:text-lg">
                 ${cart.item.price * value}

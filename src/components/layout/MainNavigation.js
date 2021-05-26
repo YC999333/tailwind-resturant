@@ -43,7 +43,7 @@ function MainNavigation() {
                     <button className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">
                       <span>Menu</span>
                     </button>
-                    <div class="w-28 h-auto absolute top-15 z-20 p-4 hidden bg-gray-300 rounded-lg group-hover:block">
+                    <div className="w-28 h-auto absolute top-15 z-20 p-4 hidden bg-gray-300 rounded-lg group-hover:block">
                       <div className="grid gap-2 p-1 grid-cols-1 grid-rows-2">
                         <a
                           className="p-1 text-sm font-semibold"
@@ -101,7 +101,7 @@ function MainNavigation() {
                     aria-expanded="false"
                     aria-haspopup="true"
                   >
-                    <span class="sr-only">Open user menu</span>
+                    <span className="sr-only">Open user menu</span>
                     <img
                       className="h-8 w-8 rounded-full backdrop-filter backdrop-invert"
                       src="https://static.thenounproject.com/png/363639-200.png"
@@ -113,7 +113,7 @@ function MainNavigation() {
 
               {isOpen ? (
                 <div
-                  class="z-20 origin-top-right absolute right-10 top-10 mt-2 w-48 rounded-md shadow-lg py-1 bg-gray-300 ring-1 ring-black ring-opacity-5 focus:outline-none"
+                  className="z-20 origin-top-right absolute right-10 top-10 mt-2 w-48 rounded-md shadow-lg py-1 bg-gray-300 ring-1 ring-black ring-opacity-5 focus:outline-none"
                   role="menu"
                   aria-orientation="vertical"
                   aria-labelledby="user-menu-button"
@@ -139,7 +139,7 @@ function MainNavigation() {
                   </a>
                   <a
                     href="/"
-                    class="block px-4 py-2 text-sm text-gray-700"
+                    className="block px-4 py-2 text-sm text-gray-700"
                     role="menuitem"
                     tabindex="-1"
                     id="user-menu-item-2"
@@ -223,7 +223,7 @@ function MainNavigation() {
                   About Us
                 </a>
 
-                <div class="relative group">
+                <div className="relative group">
                   <button class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">
                     <span>Menu</span>
                   </button>

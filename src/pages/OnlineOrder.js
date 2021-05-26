@@ -1,11 +1,10 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import Cart from "./Cart";
 import MenuItem from "./MenuItem";
 import menu from "../Data/menu";
 import Context from "./Context/Context";
 
 function OnlineOrder() {
-  const [isCartOpen, setIsCartOpen] = useState(false);
   const {
     antipasti,
     soup,
@@ -25,7 +24,7 @@ function OnlineOrder() {
 
   return (
     <div className="bg-gray-50 text-gray-800 p-1">
-      <div className="relative grid p-4 grid-cols-1 md:grid-cols-9 lg:grid-cols-9 xl:grid-cols-8 gap-4">
+      <div className="relative grid p-8 grid-cols-1 md:grid-cols-9 lg:grid-cols-9 xl:grid-cols-8 gap-4">
         <div className="grid md:col-span-5 lg:col-span-6 xl:col-span-5">
           <p className="text-center mb-24 uppercase text-4xl font-bold mt-10">
             Online Order

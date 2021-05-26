@@ -1,34 +1,66 @@
-import { ADD_TO_CART, REMOVE_FROM_CART, CLEAR_ALL_FROM_CART } from "./types";
+import {
+  ADD_TO_CART,
+  REMOVE_FROM_CART,
+  CLEAR_ALL_FROM_CART,
+  INCREMENT_QTY,
+  DECREMENT_QTY,
+} from "./types";
 
-const addItemToCart = (state, item) => {
-  const copy = [...state.carts];
-  const currItemIndex = copy.findIndex((i) => i.item.id === item.id);
-
-  if (currItemIndex < 0) {
-    copy.push({ item, quantity: 1 });
-  } else {
-    const copyItem = { ...copy[currItemIndex] };
-    copyItem.quantity++;
-    copy[currItemIndex] = copyItem;
-  }
-
-  return { ...state, carts: copy };
+export const sumItems = (cartItem) => {
+  let total = cartItem.reduce(
+    (total, cartItem) => total + cartItem.price * cartItem.quantity,
+    0
+  );
+  return { total };
 };
 
-const removeItemFromCart = (state, itemId) => {
-  const copy = [...state.carts];
-  const currItemIndex = copy.findIndex((i) => i.item.id === itemId);
+const incrementQty = (state, cartItem) => {
+  const tempCarts = [...state.carts];
+  const currItemIndex = tempCarts.findIndex((i) => i.id === cartItem.id);
+  const currItem = tempCarts[currItemIndex];
+  currItem.quantity++;
 
-  const currItem = { ...copy[currItemIndex] };
-  currItem.quantity--;
+  let itemTotal = 0;
+  itemTotal = currItem.quantity * currItem.price;
 
-  if (currItem.quantity <= 0) {
-    copy.splice(currItem, 1);
-  } else {
-    copy[currItemIndex] = currItem;
+  return { ...state, ...sumItems(state.carts), cart: tempCarts };
+};
+
+const addItemToCart = (state, cartItem) => {
+  const tempCarts = [...state.carts];
+  const currItemIndex = tempCarts.findIndex((i) => i.id === cartItem.id);
+
+  if (currItemIndex < 0) {
+    tempCarts.push({ ...cartItem, quantity: 1 });
   }
 
-  return { ...state, carts: copy };
+  return { ...state, ...sumItems(state.carts), carts: tempCarts };
+};
+
+const decrementQty = (state, cartId) => {
+  const tempCarts = [...state.carts];
+
+  const currItemIndex = tempCarts.findIndex((i) => i.id === cartId);
+
+  const currItem = tempCarts[currItemIndex];
+
+  if (currItem.quantity >= 1) {
+    currItem.quantity--;
+  }
+
+  return { ...state, carts: tempCarts };
+};
+
+const removeItemFromCart = (state, cartId) => {
+  const tempCarts = [...state.carts];
+  const currItemIndex = tempCarts.findIndex((i) => i.id === cartId);
+  const currItem = tempCarts[currItemIndex];
+
+  if (currItem.quantity <= 0) {
+    tempCarts.splice(currItem, 1);
+  }
+
+  return { ...state, carts: tempCarts };
 };
 
 const clearCart = (state) => {
@@ -43,6 +75,10 @@ export default (state, action) => {
       return removeItemFromCart(state, action.payload);
     case CLEAR_ALL_FROM_CART:
       return clearCart(state);
+    case INCREMENT_QTY:
+      return incrementQty(state, action.payload);
+    case DECREMENT_QTY:
+      return decrementQty(state, action.payload);
     default:
       return state;
   }

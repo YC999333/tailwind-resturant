@@ -29,8 +29,9 @@ function Cart() {
               <div className="font-semibold text-sm md:text-lg mr-3">
                 <span>{cart.title}</span>
               </div>
-              {cart.quantity >= 1 ? (
-                <div className="font-semibold w-8 lg:w-12 text-center border rounded-lg hover:border-indigo-500">
+
+              <div className="font-semibold w-8 lg:w-12 text-center border rounded-lg hover:border-indigo-500">
+                {cart.quantity >= 1 ? (
                   <button
                     onClick={(e) => {
                       e.preventDefault();
@@ -40,15 +41,20 @@ function Cart() {
                   >
                     <i className="ri-subtract-line md:text-base text-sm"></i>
                   </button>
-                </div>
-              ) : null}
-              {cart.quantity === 0 ? (
-                <div className="font-semibold w-8 text-center lg:w-12 border rounded-lg hover:border-indigo-500">
-                  <button onClick={() => context.removeItemFromCart(cart.id)}>
+                ) : null}
+
+                {cart.quantity === 0 ? (
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      context.removeItemFromCart(cart.id);
+                    }}
+                  >
                     <i className="ri-subtract-line md:text-base text-sm"></i>
                   </button>
-                </div>
-              ) : null}
+                ) : null}
+              </div>
+
               <div className="m-2 rounded-lg w-8 text-center sm:w-10 text-center text-sm lg:text-md hover:border-indigo-500">
                 <p>{cart.quantity}</p>
               </div>

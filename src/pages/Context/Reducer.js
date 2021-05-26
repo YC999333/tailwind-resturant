@@ -6,14 +6,6 @@ import {
   DECREMENT_QTY,
 } from "./types";
 
-export const sumItems = (cartItem) => {
-  let total = cartItem.reduce(
-    (total, cartItem) => total + cartItem.price * cartItem.quantity,
-    0
-  );
-  return { total };
-};
-
 const incrementQty = (state, cartItem) => {
   const tempCarts = [...state.carts];
   const currItemIndex = tempCarts.findIndex((i) => i.id === cartItem.id);
@@ -23,7 +15,7 @@ const incrementQty = (state, cartItem) => {
   let itemTotal = 0;
   itemTotal = currItem.quantity * currItem.price;
 
-  return { ...state, ...sumItems(state.carts), cart: tempCarts };
+  return { ...state, cart: tempCarts };
 };
 
 const addItemToCart = (state, cartItem) => {
@@ -34,7 +26,7 @@ const addItemToCart = (state, cartItem) => {
     tempCarts.push({ ...cartItem, quantity: 1 });
   }
 
-  return { ...state, ...sumItems(state.carts), carts: tempCarts };
+  return { ...state, carts: tempCarts };
 };
 
 const decrementQty = (state, cartId) => {

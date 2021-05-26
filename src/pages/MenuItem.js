@@ -11,22 +11,14 @@ function MenuItem({ ...props }) {
 
       <div className="absolute bottom-3 right-5 sm:right-5 sm:right-10">
         <form>
-          {/* <input
-            className="border text-center w-10 text-xs trasmform hover:border-red-500"
-            min="1"
-            type="number"
-            default={1}
-            onChange={(e) => setQty(e.target.value)}
-            value={qty}
-          /> */}
           <button
             onClick={(e) => {
               addItemToCart({ ...props });
               e.preventDefault();
             }}
-            className="absolute bottom-2 right-0.5 border text-center w-20 h-7 text-sm rounded-lg mx-2 trasmform hover:border-red-500"
+            className="absolute bottom-1.5 right-0.5 border text-center w-28 h-7 text-sm rounded-lg mx-2 trasmform hover:border-red-500"
           >
-            Add
+            Add To Cart
           </button>
         </form>
       </div>

@@ -12,7 +12,6 @@ function Cart() {
   const onChange = (e) => {
     e.preventDefault();
     setSelected({ orderOption: e.target.value });
-    console.log(selected.orderOption);
   };
 
   return (
@@ -25,44 +24,44 @@ function Cart() {
           return (
             <div
               key={cart.id}
-              className="flex flex-1 w-52 md:w-4/5 mx-auto items-center justify-between mt-10 mb-5"
+              className="flex w-52 md:w-4/5 mx-auto items-center justify-between mt-10 mb-5"
             >
-              <span className="font-semibold text-sm md:text-lg mr-3 w-28">
-                {cart.title}
-              </span>
-              <button
-                className="font-semibold w-8 lg:w-12 border rounded-lg hover:border-indigo-500 w-6"
-                onClick={(e) => {
-                  e.preventDefault();
-                  context.incrementQty(cart);
-                }}
-              >
-                <i className="ri-add-line md:text-base text-sm"></i>
-              </button>
-              <p className="m-2 rounded-lg w-8 sm:w-10 text-center text-sm lg:text-md hover:border-indigo-500">
-                {cart.quantity}
-              </p>
+              <div className="font-semibold text-sm md:text-lg mr-3">
+                <span>{cart.title}</span>
+              </div>
               {cart.quantity >= 1 ? (
-                <button
-                  className="font-semibold w-8 lg:w-12 border rounded-lg hover:border-indigo-500 w-6"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    console.log(cart.id);
-                    context.decrementQty(cart.id);
-                  }}
-                >
-                  <i className="ri-subtract-line md:text-base text-sm"></i>
-                </button>
+                <div className="font-semibold w-8 lg:w-12 text-center border rounded-lg hover:border-indigo-500">
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      console.log(cart.id);
+                      context.decrementQty(cart.id);
+                    }}
+                  >
+                    <i className="ri-subtract-line md:text-base text-sm"></i>
+                  </button>
+                </div>
               ) : null}
               {cart.quantity === 0 ? (
-                <button
-                  className="font-semibold w-8 lg:w-12 border rounded-lg hover:border-indigo-500 w-6"
-                  onClick={() => context.removeItemFromCart(cart.id)}
-                >
-                  <i className="ri-subtract-line md:text-base text-sm"></i>
-                </button>
+                <div className="font-semibold w-8 text-center lg:w-12 border rounded-lg hover:border-indigo-500">
+                  <button onClick={() => context.removeItemFromCart(cart.id)}>
+                    <i className="ri-subtract-line md:text-base text-sm"></i>
+                  </button>
+                </div>
               ) : null}
-
+              <div className="m-2 rounded-lg w-8 text-center sm:w-10 text-center text-sm lg:text-md hover:border-indigo-500">
+                <p>{cart.quantity}</p>
+              </div>
+              <div className="font-semibold w-8 text-center lg:w-12 border rounded-lg hover:border-indigo-500">
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    context.incrementQty(cart);
+                  }}
+                >
+                  <i className="ri-add-line md:text-base text-sm"></i>
+                </button>
+              </div>
               <span className="font-semibold mx-3 w-20 text-center text-sm md:text-lg">
                 ${cart.price * cart.quantity}
               </span>

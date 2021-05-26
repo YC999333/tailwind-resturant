@@ -56,11 +56,12 @@ const removeItemFromCart = (state, cartId) => {
   const currItemIndex = tempCarts.findIndex((i) => i.id === cartId);
   const currItem = tempCarts[currItemIndex];
 
+  let filterCarts = [];
   if (currItem.quantity <= 0) {
-    tempCarts.splice(currItem, 1);
+    filterCarts = tempCarts.filter((cartItem) => cartItem.id !== cartId);
   }
 
-  return { ...state, carts: tempCarts };
+  return { ...state, carts: filterCarts };
 };
 
 const clearCart = (state) => {

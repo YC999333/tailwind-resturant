@@ -19,6 +19,69 @@ body,
   visibility: visible;
 }
 
-#cart:hover > #show-cart {
+/* #cart:hover > #show-cart {
   display: block;
+} */
+
+@media (max-width: 630px) {
+  .cart-item {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    top: -10px;
+    right: -10px;
+  }
+  .cart-item::before {
+    content: "1";
+    display: block;
+    line-height: 24px;
+    height: 24px;
+    width: 24px;
+    font-size: 12px;
+    font-weight: 600;
+    background: #2bd156;
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+  }
+
+  .send-to-cart.cart-item {
+    display: block;
+    animation: xAxis 1s forwards cubic-bezier(1, 0.44, 0.84, 0.165);
+  }
+
+  .send-to-cart.cart-item::before {
+    animation: yAxis 1s alternate forwards cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  .shake {
+    animation: shakeCart 0.4s ease-in-out forwards;
+  }
+
+  @keyframes xAxis {
+    100% {
+      transform: translateX(calc(1vw - 150px));
+    }
+  }
+
+  @keyframes yAxis {
+    100% {
+      transform: translateY(-100px);
+    }
+  }
+
+  @keyframes shakeCart {
+    25% {
+      transform: translateX(6px);
+    }
+    50% {
+      transform: translateX(-4px);
+    }
+    75% {
+      transform: translateX(2px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
 }

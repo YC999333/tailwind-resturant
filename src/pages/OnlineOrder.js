@@ -1,10 +1,22 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useRef, useEffect } from "react";
 import Cart from "./Cart";
 import MenuItem from "./MenuItem";
 import menu from "../Data/menu";
 import Context from "./Context/Context";
 
 function OnlineOrder() {
+  const [shake, setShake] = useState(false);
+  const [showCart, setShowCart] = useState(false);
+
+  console.log(showCart);
+  const ref = useRef();
+
+  useEffect(() => {
+    shake
+      ? ref.current.classList.add("shake")
+      : ref.current.classList.remove("shake");
+  }, [shake]);
+
   const {
     antipasti,
     soup,
@@ -21,6 +33,13 @@ function OnlineOrder() {
   } = menu;
 
   const context = useContext(Context);
+
+  const handleProductAdd = () => {
+    setShake(true);
+    setTimeout(() => {
+      setShake(false);
+    }, 500);
+  };
 
   return (
     <div className="bg-gray-50 text-gray-800 p-1">
@@ -45,6 +64,7 @@ function OnlineOrder() {
                   price={a.price}
                   id={a.id}
                   addItemToCart={context.addItemToCart}
+                  onProductAdd={handleProductAdd}
                 />
               );
             })}
@@ -62,6 +82,7 @@ function OnlineOrder() {
                   price={s.price}
                   id={s.id}
                   addItemToCart={context.addItemToCart}
+                  onProductAdd={handleProductAdd}
                 />
               );
             })}
@@ -79,6 +100,7 @@ function OnlineOrder() {
                   price={s.price}
                   id={s.id}
                   addItemToCart={context.addItemToCart}
+                  onProductAdd={handleProductAdd}
                 />
               );
             })}
@@ -96,6 +118,7 @@ function OnlineOrder() {
                   price={p.price}
                   id={p.id}
                   addItemToCart={context.addItemToCart}
+                  onProductAdd={handleProductAdd}
                 />
               );
             })}
@@ -113,6 +136,7 @@ function OnlineOrder() {
                   price={p.price}
                   id={p.id}
                   addItemToCart={context.addItemToCart}
+                  onProductAdd={handleProductAdd}
                 />
               );
             })}
@@ -130,6 +154,7 @@ function OnlineOrder() {
                   price={m.price}
                   id={m.id}
                   addItemToCart={context.addItemToCart}
+                  onProductAdd={handleProductAdd}
                 />
               );
             })}
@@ -147,6 +172,7 @@ function OnlineOrder() {
                   price={d.price}
                   id={d.id}
                   addItemToCart={context.addItemToCart}
+                  onProductAdd={handleProductAdd}
                 />
               );
             })}
@@ -168,6 +194,7 @@ function OnlineOrder() {
                   price={r.price}
                   id={r.id}
                   addItemToCart={context.addItemToCart}
+                  onProductAdd={handleProductAdd}
                 />
               );
             })}
@@ -185,6 +212,7 @@ function OnlineOrder() {
                   price={w.price}
                   id={w.id}
                   addItemToCart={context.addItemToCart}
+                  onProductAdd={handleProductAdd}
                 />
               );
             })}
@@ -202,6 +230,7 @@ function OnlineOrder() {
                   price={c.price}
                   id={c.id}
                   addItemToCart={context.addItemToCart}
+                  onProductAdd={handleProductAdd}
                 />
               );
             })}
@@ -219,6 +248,7 @@ function OnlineOrder() {
                   price={b.price}
                   id={b.id}
                   addItemToCart={context.addItemToCart}
+                  onProductAdd={handleProductAdd}
                 />
               );
             })}
@@ -236,6 +266,7 @@ function OnlineOrder() {
                   price={n.price}
                   id={n.id}
                   addItemToCart={context.addItemToCart}
+                  onProductAdd={handleProductAdd}
                 />
               );
             })}
@@ -243,24 +274,30 @@ function OnlineOrder() {
         </div>
 
         <div className="fixed right-5 w-80 lg:w-92 xl:w-2/6 xl:px-10 grid hidden md:block md:col-span-4 lg:col-span-3 mt-4 h-full overflow-x-auto pb-20">
-          <Cart />
+          <Cart shake={shake} />
         </div>
 
         <div
+          ref={ref}
           id="cart"
-          className="md:hidden fixed top-0 left-0 h-full flex sm:pt-24 pt-28"
+          className="md:hidden fixed top-0 left-0.5 h-full flex sm:pt-24 pt-28"
         >
-          <button className="text-2xl w-10 h-10">
+          <button
+            onClick={() => setShowCart(!showCart)}
+            className="text-2xl p-0 w-12 h-12 rounded-full hover:bg-indigo-500 active:shadow-lg mouse shadow transition ease-in duration-200 focus:outline-none"
+          >
             <i className="far fa-shopping-cart"></i>
           </button>
 
-          <div
-            id="show-cart"
-            className="hidden rounded-lg z-50 max-h-full w-72 overflow-x-auto"
-          >
-            <div className="h-2"></div>
-            <Cart />
-          </div>
+          {showCart ? (
+            <div
+              id="show-cart"
+              className="rounded-lg z-50 max-h-full w-72 overflow-x-auto"
+            >
+              <div className="h-2"></div>
+              <Cart shake={shake} />
+            </div>
+          ) : null}
         </div>
       </div>
     </div>

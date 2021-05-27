@@ -1,8 +1,9 @@
 import { useContext, useState } from "react";
 import Context from "./Context/Context";
 
-function Cart() {
+function Cart(props) {
   const context = useContext(Context);
+
   const [selected, setSelected] = useState({ orderOption: "hidden" });
   let total = 0;
 
@@ -15,7 +16,7 @@ function Cart() {
   };
 
   return (
-    <div className="bg-white mx-auto border border-indigo-500 pt-4 px-4 md:px-2 my-3 rounded-lg">
+    <div className="cart bg-white mx-auto border border-indigo-500 pt-4 px-4 md:px-2 my-3 rounded-lg">
       <div id="summary" className="w-full px-2 py-10">
         <h1 className="font-semibold text-center text-2xl border-b pb-8">
           Order Summary

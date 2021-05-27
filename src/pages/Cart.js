@@ -16,7 +16,7 @@ function Cart(props) {
   };
 
   return (
-    <div className="cart bg-white mx-auto border border-indigo-500 pt-4 px-4 md:px-2 my-3 rounded-lg">
+    <div className="cart bg-white mx-auto border border-indigo-500 pt-4 px-1 md:px-2 my-3 rounded-lg">
       <div id="summary" className="w-full px-2 py-10">
         <h1 className="font-semibold text-center text-2xl border-b pb-8">
           Order Summary
@@ -25,13 +25,13 @@ function Cart(props) {
           return (
             <div
               key={cart.id}
-              className="flex w-52 md:w-4/5 mx-auto items-center justify-between mt-10 mb-5"
+              className="w-52 md:w-4/5 mx-auto items-center grid grid-cols-8 col-auto justify-between mt-10 mb-5"
             >
-              <div className="font-semibold text-sm md:text-lg mr-3">
+              <div className="font-semibold col-span-3 text-xs sm:text-sm md:text-md mr-3">
                 <span>{cart.title}</span>
               </div>
 
-              <div className="font-semibold w-8 lg:w-12 text-center border rounded-lg hover:border-indigo-500">
+              <div className="font-semibold text-center border rounded-lg hover:border-indigo-500">
                 {cart.quantity >= 1 ? (
                   <button
                     onClick={(e) => {
@@ -56,10 +56,10 @@ function Cart(props) {
                 ) : null}
               </div>
 
-              <div className="m-2 rounded-lg w-8 text-center sm:w-10 text-center text-sm lg:text-md hover:border-indigo-500">
+              <div className="m-2 rounded-lg text-center text-center text-sm lg:text-md hover:border-indigo-500">
                 <p>{cart.quantity}</p>
               </div>
-              <div className="font-semibold w-8 text-center lg:w-12 border rounded-lg hover:border-indigo-500">
+              <div className="font-semibold text-center border rounded-lg hover:border-indigo-500">
                 <button
                   onClick={(e) => {
                     e.preventDefault();
@@ -69,7 +69,7 @@ function Cart(props) {
                   <i className="ri-add-line md:text-base text-sm"></i>
                 </button>
               </div>
-              <span className="font-semibold mx-3 w-20 text-center text-sm md:text-lg">
+              <span className="font-semibold mx-3 col-span-2 text-center text-xs sm:text-sm md:text-md">
                 ${cart.price * cart.quantity}
               </span>
             </div>

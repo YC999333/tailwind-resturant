@@ -22,8 +22,11 @@ const addItemToCart = (state, cartItem) => {
   const tempCarts = [...state.carts];
   const currItemIndex = tempCarts.findIndex((i) => i.id === cartItem.id);
 
+  const currItem = tempCarts[currItemIndex];
   if (currItemIndex < 0) {
     tempCarts.push({ ...cartItem, quantity: 1 });
+  } else {
+    currItem.quantity++;
   }
 
   return { ...state, carts: tempCarts };

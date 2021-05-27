@@ -7,7 +7,12 @@ function Cart(props) {
   const [selected, setSelected] = useState({ orderOption: "hidden" });
   let total = 0;
 
-  context.carts.forEach((cart) => (total = total + cart.quantity * cart.price));
+  if (context.carts.length > 0) {
+    context.carts.forEach(
+      (cart) => (total = total + cart.quantity * cart.price)
+    );
+  } else total = 0;
+
   console.log(context);
 
   const onChange = (e) => {
@@ -32,7 +37,7 @@ function Cart(props) {
               </div>
 
               <div className="font-semibold text-center border rounded-lg hover:border-indigo-500">
-                {cart.quantity >= 1 ? (
+                {/* {cart.quantity >= 1 ? (
                   <button
                     onClick={(e) => {
                       e.preventDefault();
@@ -44,16 +49,16 @@ function Cart(props) {
                   </button>
                 ) : null}
 
-                {cart.quantity === 0 ? (
-                  <button
-                    onClick={(e) => {
-                      e.preventDefault();
-                      context.removeItemFromCart(cart.id);
-                    }}
-                  >
-                    <i className="ri-subtract-line md:text-base text-sm"></i>
-                  </button>
-                ) : null}
+                {cart.quantity === 0 ? ( */}
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    context.removeItemFromCart(cart.id);
+                  }}
+                >
+                  <i className="ri-subtract-line md:text-base text-sm"></i>
+                </button>
+                {/* ) : null} */}
               </div>
 
               <div className="m-2 rounded-lg text-center text-center text-sm lg:text-md hover:border-indigo-500">

@@ -34,14 +34,14 @@ body,
   .cart-item::before {
     content: "+";
     display: block;
-    line-height: 24px;
-    height: 24px;
-    width: 24px;
+    line-height: 18px;
+    height: 18px;
+    width: 18px;
     font-size: 12px;
     font-weight: 600;
     background: #2bd156;
     color: white;
-    border-radius: 20px;
+    border-radius: 10px;
     text-align: center;
   }
 

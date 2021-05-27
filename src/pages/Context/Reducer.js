@@ -33,17 +33,13 @@ const addItemToCart = (state, cartItem) => {
 };
 
 const decrementQty = (state, cartId) => {
-  const tempCarts = [...state.carts];
-
-  const currItemIndex = tempCarts.findIndex((i) => i.id === cartId);
-
-  const currItem = tempCarts[currItemIndex];
-
-  if (currItem.quantity >= 1) {
-    currItem.quantity--;
-  }
-
-  return { ...state, carts: tempCarts };
+  // const tempCarts = [...state.carts];
+  // const currItemIndex = tempCarts.findIndex((i) => i.id === cartId);
+  // const currItem = tempCarts[currItemIndex];
+  // if (currItem.quantity >= 1) {
+  //   currItem.quantity--;
+  // }
+  // return { ...state, carts: tempCarts };
 };
 
 const removeItemFromCart = (state, cartId) => {
@@ -51,12 +47,17 @@ const removeItemFromCart = (state, cartId) => {
   const currItemIndex = tempCarts.findIndex((i) => i.id === cartId);
   const currItem = tempCarts[currItemIndex];
 
-  let filterCarts = [];
-  if (currItem.quantity <= 0) {
-    filterCarts = tempCarts.filter((cartItem) => cartItem.id !== cartId);
+  if (currItem.quantity >= 1) {
+    currItem.quantity--;
   }
 
-  return { ...state, carts: filterCarts };
+  if (currItem.quantity <= 0) {
+    tempCarts.splice(currItemIndex, 1);
+  } else {
+    tempCarts[currItemIndex] = currItem;
+  }
+
+  return { ...state, carts: tempCarts };
 };
 
 const clearCart = (state) => {

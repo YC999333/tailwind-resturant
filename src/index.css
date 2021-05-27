@@ -60,7 +60,7 @@ body,
 
   @keyframes xAxis {
     100% {
-      transform: translateX(calc(1vw - 150px));
+      transform: translateX(calc(1vw - 200px));
     }
   }
 

@@ -16,11 +16,15 @@ function SignUp() {
     let formData = JSON.stringify({
       email: data.email,
       username: data.username,
+      phone: data.phone,
       password: data.password,
       confirmPassword: data.confirmPassword,
     });
     try {
       const response = await axios("http://localhost:5000/auth/signup", {
+        // const response = await axios(
+        //   "https://lavuta-restaurant.herokuapp.com/auth/signup",
+        //   {
         headers: { "content-type": "application/json" },
         data: formData,
         method: "PUT",
@@ -59,8 +63,20 @@ function SignUp() {
                 },
               })}
             />
-            {errors.username && (
-              <p className="text-red-500 mb-2">{errors.username.message}</p>
+            <input
+              type="text"
+              className="block border border-grey-light w-full p-3 rounded mb-4"
+              placeholder="Phone Number"
+              {...register("phone", {
+                required: "Required!",
+                minLength: {
+                  value: 7,
+                  message: "Invalid Phone Number",
+                },
+              })}
+            />
+            {errors.phone && (
+              <p className="text-red-500 mb-2">{errors.phone.message}</p>
             )}
 
             <input

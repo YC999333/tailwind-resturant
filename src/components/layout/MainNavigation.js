@@ -120,7 +120,7 @@ function MainNavigation() {
                   tabindex="-1"
                 >
                   <a
-                    href="/"
+                    href="/profile"
                     class="block px-4 py-2 text-sm text-gray-700"
                     role="menuitem"
                     tabindex="-1"
@@ -129,7 +129,7 @@ function MainNavigation() {
                     Your Profile
                   </a>
                   <a
-                    href="/"
+                    href="/orders"
                     class="block px-4 py-2 text-sm text-gray-700"
                     role="menuitem"
                     tabindex="-1"
@@ -138,7 +138,7 @@ function MainNavigation() {
                     Orders
                   </a>
                   <a
-                    href="/"
+                    href="/signout"
                     className="block px-4 py-2 text-sm text-gray-700"
                     role="menuitem"
                     tabindex="-1"
@@ -252,7 +252,7 @@ function MainNavigation() {
                   Online Order
                 </a>
                 <a
-                  href="/sign-p"
+                  href="/signup"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Sign Up
@@ -269,13 +269,13 @@ function MainNavigation() {
                   </button>
                   <div class="w-28 h-auto absolute top-15 z-20 p-4 hidden bg-gray-300 rounded-lg group-hover:block">
                     <div className="grid gap-2 p-1 grid-cols-1 grid-rows-2">
-                      <a className="p-1 text-sm font-semibold" href="/">
+                      <a className="p-1 text-sm font-semibold" href="/profile">
                         Profile
                       </a>
-                      <a className="p-1 text-sm font-semibold" href="/">
+                      <a className="p-1 text-sm font-semibold" href="/orders">
                         Order
                       </a>
-                      <a className="p-1 text-sm font-semibold" href="/">
+                      <a className="p-1 text-sm font-semibold" href="/signout">
                         Sign Out
                       </a>
                     </div>

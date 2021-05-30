@@ -271,8 +271,8 @@ function OnlineOrder() {
           </div>
         </div>
 
-        <div className="fixed right-5 w-80 lg:w-92 xl:w-2/6 xl:px-10 grid hidden md:block md:col-span-4 lg:col-span-3 mt-4 h-full overflow-x-auto pb-20">
-          <Cart shake={shake} />
+        <div className="right-5 w-full xl:px-10 grid hidden md:block md:col-span-4 lg:col-span-3 mt-4 overflow-x-auto">
+          <Cart />
         </div>
 
         <div

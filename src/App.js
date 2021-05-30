@@ -11,6 +11,9 @@ import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn";
 import OnlineOrder from "./pages/OnlineOrder";
 import Book from "./pages/Book";
+import Orders from "./pages/Orders";
+import Reservation from "./pages/Reservation";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
@@ -42,6 +45,15 @@ function App() {
         </Route>
         <Route path="/book-table">
           <Book />
+        </Route>
+        <Route path="/orders">
+          <Orders />
+        </Route>
+        <Route path="/reservations">
+          <Reservation />
+        </Route>
+        <Route path="/profile">
+          <Profile />
         </Route>
       </Switch>
     </Layout>

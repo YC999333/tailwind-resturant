@@ -3,14 +3,20 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import setHours from "date-fns/setHours";
 import setMinutes from "date-fns/setMinutes";
+import axios from "axios";
+import { useHistory } from "react-router-dom";
 
 function Book() {
-  const [person, setPerson] = useState("Person");
+  const history = useHistory();
+  const [person, setPerson] = useState(0);
   const [startDate, setStartDate] = useState(
     setHours(setMinutes(new Date(), 30), 11)
   );
+  const [serverError, setServerError] = useState("");
   const [adult, setAdult] = useState(1);
   const [kid, setKid] = useState(0);
+  const [name, setName] = useState("Name");
+  const [phone, setPhone] = useState("Phone");
 
   const date = startDate.toLocaleString().split(" ");
   const RDate = date[0].toString();
@@ -20,9 +26,41 @@ function Book() {
 
   const onKidChange = (e) => setKid(e.target.value);
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    console.log("Reservation Confirmed!");
+
+    const data = JSON.stringify({
+      name,
+      phone,
+      person,
+      adult,
+      kid,
+      RDate,
+      RTime,
+    });
+
+    try {
+      const response = await axios("http://localhost:5000/postReservations", {
+        // const response = await axios(
+        //   "https://lavuta-restaurant.herokuapp.com/postReservations",
+        //   {
+        headers: { "content-type": "application/json" },
+        method: "POST",
+        data: data,
+      });
+
+      if (response.status === 200 || response.status === 201) {
+        history.push("/reservations");
+      }
+    } catch (error) {
+      if (error.response) {
+        console.log(error.response.data);
+        setServerError(error.response.data.message);
+      } else {
+        console.log("Error", error.message);
+      }
+      console.log(error);
+    }
   };
 
   return (
@@ -36,12 +74,12 @@ function Book() {
       </div>
       <form onSubmit={onSubmit}>
         <div className="flex justify-center">
-          <div className="w-4/6 md:w-5/6 bg-gray-50">
+          <div className="w-full sm:w-3/5 md:w-full p-4 bg-gray-50 items-center">
             <p className="text-2xl text-center md:text-3xl mt-8 md:mt-20 mb-20">
               Reservation at LaVuTa
             </p>
-            <div className="text-base font-bold grid gap-6 md:gap-3 grid-cols-1 sm:grid-cols-3">
-              <div className="z-20 relative text-left dropdown">
+            <div className="text-base flex justify-center font-bold grid gap-6 md:gap-3 grid-cols-1 md:grid-cols-5">
+              <div className="z-40 w-full relative text-left dropdown md:col-span-2">
                 <span className="rounded-md shadow-sm">
                   <button
                     className="w-full px-4 py-2 text-md text-gray-800 transition duration-150 ease-in-out bg-white border border-gray-300 rounded-md hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800"
@@ -50,11 +88,13 @@ function Book() {
                     aria-expanded="true"
                     aria-controls="headlessui-menu-items-117"
                   >
-                    <span>{person}</span>
+                    <span>
+                      {person} Persons: {adult} Adults - {kid} Kids
+                    </span>
                   </button>
                 </span>
-                <div className="opacity-0 invisible dropdown-menu transition-all duration-300 transform origin-top-right -translate-y-2 scale-95">
-                  <div className="z-50 p-7 px-auto absolute border shadow-xl rounded-xl inline-block space-y-3 bg-white">
+                <div className="opacity-0 w-full invisible dropdown-menu transition-all duration-300 transform origin-top-right -translate-y-2">
+                  <div className="z-50 p-7 w-full px-auto absolute border shadow-xl rounded-xl inline-block space-y-3 bg-white">
                     <div className="flex space-x-4 justify-between">
                       <div>Adults</div>
                       <div>
@@ -83,8 +123,9 @@ function Book() {
                     </div>
                     <div className="pt-4 mx-auto">
                       <button
-                        onClick={() => {
-                          setPerson(`${adult} Adults, ${kid} Kids`);
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setPerson(+adult + +kid);
                         }}
                         className="block w-5/6 bg-blue-400 rounded-lg font-semibold text-sm text-white mt-4"
                       >
@@ -95,13 +136,13 @@ function Book() {
                 </div>
               </div>
 
-              <div className="z-10 text-left dropdown">
+              <div className="z-30 text-left dropdown md:col-span-3 w-full">
                 <span className="rounded-md shadow-sm">
                   <button
                     className="w-full px-4 py-2 text-md text-gray-800 transition duration-150 ease-in-out bg-white border border-gray-300 rounded-lg hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800"
                     type="button"
                     aria-haspopup="true"
-                    aria-expanded="true"
+                    aria-expanded="trfue"
                     aria-controls="headlessui-menu-items-117"
                   >
                     <span>
@@ -109,7 +150,7 @@ function Book() {
                     </span>
                   </button>
                 </span>
-                <div className="border rounded-lg w-96 lg:w-full bg-white border-blue-500 opacity-0 dropdown-menu transition-all duration-300">
+                <div className="border bg-white border-blue-500 opacity-0 dropdown-menu transition-all duration-300">
                   <DatePicker
                     selected={startDate}
                     onChange={(date) => setStartDate(date)}
@@ -136,11 +177,65 @@ function Book() {
                 </div>
               </div>
 
-              <div className="z-0 relative text-left dropdown">
+              <div className="z-20 relative text-left dropdown w-full md:col-span-2">
                 <span className="rounded-md shadow-sm">
                   <button
-                    className="justify-center w-full px-4 py-2 text-md text-gray-800 transition duration-150 ease-in-out bg-white border border-gray-300 rounded-md hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800"
+                    className="w-full px-4 py-2 text-md text-gray-800 transition duration-150 ease-in-out bg-white border border-gray-300 rounded-md hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800"
                     type="button"
+                    aria-haspopup="true"
+                    aria-expanded="true"
+                    aria-controls="headlessui-menu-items-117"
+                  >
+                    <span>{name}</span>
+                  </button>
+                </span>
+                <div className="w-full opacity-0 invisible dropdown-menu transition-all duration-300 transform origin-top-right -translate-y-2">
+                  <div className="w-full p-7 px-auto absolute border shadow-xl rounded-xl inline-block space-y-3 bg-white">
+                    <label htmlFor="Name" className="text-sm mr-3">
+                      Your Name
+                    </label>
+                    <input
+                      onChange={(e) => setName(e.target.value)}
+                      name="name"
+                      type="text"
+                      className="border-b w-full border-gray-300"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className="z-10 relative text-left dropdown w-full md:col-span-2">
+                <span className="rounded-md shadow-sm">
+                  <button
+                    className="w-full px-4 py-2 text-md text-gray-800 transition duration-150 ease-in-out bg-white border border-gray-300 rounded-md hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800"
+                    type="button"
+                    aria-haspopup="true"
+                    aria-expanded="true"
+                    aria-controls="headlessui-menu-items-117"
+                  >
+                    <span>{phone}</span>
+                  </button>
+                </span>
+                <div className="opacity-0 invisible dropdown-menu transition-all duration-300 transform origin-top-right -translate-y-2">
+                  <div className="w-full p-7 px-auto absolute border shadow-xl rounded-xl inline-block space-y-3 bg-white">
+                    <label htmlFor="Phone" className="text-sm mr-3">
+                      Your Phone
+                    </label>
+                    <input
+                      onChange={(e) => setPhone(e.target.value)}
+                      name="phone"
+                      type="text"
+                      className="border-b w-full border-gray-300"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative text-left">
+                <span className="rounded-md shadow-sm">
+                  <button
+                    className="justify-center w-full text-white bg bg-indigo-500 px-4 py-2 text-md text-gray-800 transition duration-150 ease-in-out bg-white border border-gray-300 rounded-md hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800"
+                    type="submit"
                     aria-haspopup="true"
                     aria-expanded="true"
                     aria-controls="headlessui-menu-items-117"

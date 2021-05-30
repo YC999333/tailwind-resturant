@@ -1,4 +1,4 @@
-import { useRef, useContext } from "react";
+import { useRef } from "react";
 
 function MenuItem({ ...props }) {
   const ref = useRef();

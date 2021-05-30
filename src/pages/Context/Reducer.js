@@ -12,9 +12,6 @@ const incrementQty = (state, cartItem) => {
   const currItem = tempCarts[currItemIndex];
   currItem.quantity++;
 
-  let itemTotal = 0;
-  itemTotal = currItem.quantity * currItem.price;
-
   return { ...state, cart: tempCarts };
 };
 
